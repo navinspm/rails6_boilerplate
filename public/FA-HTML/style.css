@@ -1,0 +1,1086 @@
+:root {
+  --primColor: #0c8bbd;
+  --textColor: #333333;
+  --gradColor: linear-gradient(
+    90deg,
+    rgb(1, 134, 196) 0%,
+    rgba(1, 189, 217) 100%
+  );
+  --activeGrad: linear-gradient(
+    90deg,
+    rgba(225, 236, 253, 1) 0%,
+    rgb(255, 255, 255) 100%
+  );
+  --errorColor: #ff0000;
+  --borderColor: #bebebe;
+  --inputShade: #f4fcff;
+  --secColor: #2c9f1c;
+  --secGradColor: linear-gradient(
+    90deg,
+    rgba(21, 158, 0, 1) 0%,
+    rgba(40, 217, 11, 1) 100%
+  );
+}
+
+.text-danger {
+  color: var(--errorColor) !important;
+}
+
+body {
+  /* font-family: "Roboto", sans-serif;00 */
+  font-family: "Open Sans", sans-serif;
+  font-weight: var(--medium);
+  color: var(--textColor);
+  background: url("./assets/mnbg.png");
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: 60% 80%;
+  background-attachment: fixed;
+  max-height: 100vh;
+  overflow-y: hidden;
+}
+
+/*custom scrollbar*/
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.btn:focus,
+button:focus {
+  box-shadow: none;
+}
+
+.fadashBoard .inptWrpr {
+  text-align: left;
+  margin-bottom: 13px;
+  display: flex;
+  align-items: center;
+}
+
+.fadashBoard .inptWrpr label {
+  font-size: 13px;
+  text-align: left;
+  margin: 0;
+  min-width: 80px;
+}
+
+.fadashBoard .inptWrpr p {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.modalForm .inptWrpr {
+  margin-bottom: 17px;
+}
+
+.modalForm .inptWrpr label {
+  width: 100%;
+}
+
+.fadashBoard label {
+  font-size: 13px;
+  text-align: left;
+  margin: 0;
+}
+
+.fadashBoard .inptWrpr label.mxLbl {
+  min-width: 150px;
+}
+
+.fadashBoard .inptWrpr label.smlLbl {
+  min-width: 60px;
+}
+
+.fadashBoard .inptWrpr input[type="checkbox"] {
+  height: 14px !important;
+  width: 14px !important;
+}
+
+.fadashBoard .inptWrpr input:not([type="radio"]),
+.fadashBoard .inptWrpr select,
+.fadashBoard .inptWrpr textarea,
+.modalForm .inptWrpr input:not([type="radio"]),
+.modalForm .inptWrpr select,
+.modalForm .inptWrpr textarea {
+  width: 100%;
+  height: 32px;
+  border-radius: 2px;
+  border: 1px solid var(--borderColor);
+  transition: all 0.3s ease-in-out;
+  padding: 0 10px;
+  font-size: 13px;
+}
+
+.fadashBoard .inptWrpr input[type="radio"],
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.fadashBoard .inptWrpr textarea {
+  height: 100px;
+  resize: none;
+  padding: 10px;
+}
+
+.modalForm .inptWrpr textarea {
+  height: 70px;
+  resize: none;
+  padding: 10px;
+}
+
+.fadashBoard .inptWrpr input:focus,
+.fadashBoard .inptWrpr select:focus,
+.fadashBoard .inptWrpr textarea:focus {
+  outline: none;
+  border-color: var(--primColor);
+  background: var(--inputShade);
+}
+
+.fadashBoard .inptWrpr input::placeholder {
+  font-size: 13px;
+}
+
+.fadashBoard .mainLftNavbar {
+  width: 220px;
+  box-shadow: 0 0 6px #00000029;
+  height: 100vh;
+  z-index: 999;
+  min-width: 220px;
+  transition: 0.3s ease-in-out;
+}
+
+.fadashBoard .mainLftNavbar .lgContainer {
+  text-align: center;
+  padding: 15px;
+}
+
+.fadashBoard .mainLftNavbar .lgContainer img {
+  width: 170px;
+  transition: 0.3s ease-in-out;
+}
+
+.fadashBoard .prflContents {
+  padding: 10px;
+  text-align: center;
+}
+
+.fadashBoard .prflContents img {
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+}
+
+.fadashBoard .prflContents .usrNme {
+  font-size: 14px;
+  margin-top: 8px;
+  margin-bottom: 0px;
+}
+
+.fadashBoard .prflContents .usrEmlId {
+  font-size: 11px;
+  color: var(--primColor);
+  margin: 0;
+  text-decoration: none;
+}
+
+.fadashBoard .mainLftNavbar .btn.lftNvBtn {
+  /* height: 40px; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 13px;
+  border-left: 5px solid transparent;
+  border-radius: 0;
+  text-align: left;
+}
+
+.fadashBoard .mainLftNavbar .lftNvBtn.active,
+.fadashBoard .mainLftNavbar .lftNvBtn:hover {
+  background: var(--activeGrad);
+  border-left: 5px solid var(--primColor);
+  color: var(--primColor);
+}
+
+.fadashBoard .mainLftNavbar .lftNvBtn img.navIcons {
+  margin-right: 15px;
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  filter: grayscale() brightness(0);
+}
+
+.fadashBoard .mainLftNavbar .lftNvBtn.active img,
+.fadashBoard .mainLftNavbar .lftNvBtn:hover img {
+  filter: unset;
+}
+
+.fadashBoard .mainLftNavbar .lftNvBtn {
+  position: relative;
+}
+
+.fadashBoard .mainLftNavbar .lftNvBtn .adBtn {
+  position: absolute;
+  right: 10px;
+  width: 18px;
+  height: 18px;
+  top: 15px;
+  display: none;
+}
+
+.fadashBoard .mainLftNavbar .lftNvBtn.inrLftBtn .adBtn {
+  top: 10px;
+}
+
+.fadashBoard .mainLftNavbar .lftNvBtn:hover .adBtn {
+  display: block;
+}
+
+.fadashBoard .mainLftNavbar .lftNvBtn {
+  /* height: 54px; */
+  position: relative;
+}
+
+.fadashBoard .mainLftNavbar .lftNvBtn.acrdBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fadashBoard .mainLftNavbar .inrLftBtn {
+  width: 100%;
+}
+
+.fadashBoard .navTabsWrapper {
+  max-height: 62vh;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.fadashBoard .mainLftNavbar .adtnNavBtns {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: sticky;
+  bottom: 0;
+  box-shadow: 0 0px 6px rgb(219, 219, 219);
+  height: 100%;
+  max-height: 50px;
+  margin-top: auto;
+}
+
+.fadashBoard .mainLftNavbar .adtnNavBtns .lftNvBtn {
+  width: 50%;
+  margin: 0;
+  color: #707070;
+  font-size: 12px;
+  height: 100%;
+}
+
+.fadashBoard .mainLftNavbar .adtnNavBtns .lftNvBtn img {
+  width: 15px;
+  height: 15px;
+  filter: brightness(0.8) grayscale(1);
+}
+
+.fadashBoard .mainLftNavbar .adtnNavBtns .lftNvBtn:hover img {
+  filter: unset;
+}
+
+.fadashBoard .mainLftNavbar .adtnNavBtns {
+  position: relative;
+}
+
+.fadashBoard .mainLftNavbar .adtnNavBtns .hdBtn {
+  position: absolute;
+  top: 3px;
+  right: -24px;
+  transition: 0.3s ease-in-out;
+}
+
+.fadashBoard .mainLftNavbar .lftNvBtn.acrdBtn .material-icons {
+  transform: rotate(180deg);
+  transition: all 0.3s ease-in-out;
+}
+
+.fadashBoard .mainLftNavbar .lftNvBtn.acrdBtn.collapsed .material-icons {
+  transform: rotate(0deg) !important;
+}
+
+.fadashBoard .mainLftNavbar .lftNvBtn.inrLftBtn {
+  font-size: 13px;
+  background: whitesmoke;
+  min-height: 40px;
+  /* max-height: max-content; */
+  /* height: 100%; */
+  padding-left: 50px;
+  padding-right: 27px;
+}
+
+.fadashBoard .mainLftNavbar .lftNvBtn.inrLftBtn:hover,
+.fadashBoard .mainLftNavbar .lftNvBtn.inrLftBtn.active {
+  background: var(--activeGrad);
+}
+
+.fadashBoard .tpNvBar {
+  background: var(--gradColor);
+  width: 100%;
+  /* height: 42px; */
+  padding: 20px 40px;
+}
+
+.fadashBoard .tpNvBar .infoIcons .notiInfoIcons img {
+  width: 22px;
+}
+
+.fadashBoard .tpNvBar .infoIcons {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: auto;
+  width: max-content;
+}
+
+.fadashBoard .tpNvBar .infoIcons .notiInfoIcons {
+  margin-left: 20px;
+  position: relative;
+  text-decoration: none;
+}
+
+.fadashBoard .tpNvBar .infoIcons .notiInfoIcons .ntiCntCrcl {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 10px;
+  background: red;
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  top: -1px;
+  right: -10px;
+}
+
+.fadashBoard .faInrDshbord .famnCntnr {
+  padding: 20px 30px;
+  max-height: calc(100vh - 92px);
+  overflow-y: auto;
+}
+
+.fadashBoard .faInrDshbord .nwPgHdr {
+  padding: 14px 30px;
+  background: #f2fbff;
+  color: var(--primColor);
+  border-radius: 0 0 15px 15px;
+  /* box-shadow: 0 1px 6px #00000026; */
+  max-height: 50px;
+}
+
+.fadashBoard .faInrDshbord .nwPgHdr .btn {
+  height: 30px;
+  font-size: 14px;
+}
+
+.fadashBoard .faInrDshbord .nwPgHdr h3,
+.fadashBoard .faInrDshbord .nwPgHdr .material-icons {
+  font-size: 18px;
+  font-weight: normal;
+  margin: 0;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+.fadashBoard .mnDate {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.fadashBoard .mnDay {
+  font-size: 14px;
+}
+
+.fadashBoard .table thead {
+  background: var(--gradColor);
+}
+
+.fadashBoard .table thead th {
+  font-weight: 500;
+  font-size: 13px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.fadashBoard .table tbody td {
+  font-size: 13px;
+}
+
+.fadashBoard .table.vwTable tbody tr:nth-child(even) {
+  background: rgb(241, 252, 255);
+}
+
+.fadashBoard .btn.outlButton.admrBtn {
+  border: 1.6px dashed var(--primColor);
+  color: var(--primColor);
+  max-width: max-content;
+  min-width: 114px;
+  font-size: 13px;
+}
+
+.fadashBoard .btn.admrBtn {
+  max-height: 35px;
+}
+
+.fadashBoard .btn.outlButton.admrBtn .material-icons {
+  font-size: 17px;
+}
+
+.fadashBoard .formWrapper .outlButton.admrBtn {
+  max-width: 140px;
+  max-height: 35px;
+}
+
+.fadashBoard .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fadashBoard .prcDtls .inptWrpr p {
+  font-weight: bold;
+}
+
+.fadashBoard .prcDtls .inptWrpr p.mnPrcVle {
+  color: var(--secColor);
+}
+
+.fadashBoard .btn.primButton,
+.fadashBoard .btn.secButton {
+  height: 38px;
+}
+
+.fadashBoard .primButton,
+.modalForm .primButton {
+  background: var(--secGradColor);
+  color: white;
+  min-width: 90px;
+  transition: 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+.fadashBoard .secButton,
+.modalForm .secButton {
+  border: 1px solid var(--primColor);
+  color: var(--primColor);
+  min-width: 90px;
+}
+
+.fadashBoard .secButton:hover {
+  background: var(--gradColor);
+  color: white;
+}
+
+.fadashBoard .ftrBtnStk {
+  border-top: 1px solid var(--borderColor);
+  padding-top: 15px;
+}
+
+.fadashBoard .mainLftNavbar.hide {
+  margin-left: -220px;
+}
+
+.fadashBoard .mainLftNavbar.hide .lgContainer img,
+.fadashBoard .mainLftNavbar.hide .lgContainer .mnuTglIcon {
+  position: fixed;
+  top: 7px;
+  left: 70px;
+  width: 140px;
+  /* filter: invert(1) brightness(1); */
+}
+
+.fadashBoard .mainLftNavbar.hide .lgContainer .mnuTglIcon {
+  left: 30px;
+  top: 9px;
+  width: max-content;
+  color: white;
+  cursor: pointer;
+}
+
+.fadashBoard .mainLftNavbar.hide .btn.hdBtn {
+  right: -39px;
+  transform: rotate(180deg);
+}
+
+.fadashBoard .nrtnValue {
+  font-size: 12px;
+  max-width: 750px;
+  text-align: justify;
+}
+
+.faModal.modal .close {
+  color: black;
+}
+
+.faModal.modal .modal-header {
+  background: var(--gradColor);
+  color: white;
+}
+
+.faModal.modal .modal-content {
+  border: none;
+}
+
+.faModal.modal .secButton.popAdBtn {
+  height: 35px;
+  /* width: max-content; */
+  font-size: 13px;
+  min-width: unset;
+  width: 100%;
+}
+
+.faModal.modal .table td {
+  font-size: 13px;
+}
+
+.fadashBoard .btn.text-danger {
+  font-size: 13px;
+}
+
+.fadashBoard .nwPgHdr.bg-white {
+  border-radius: 0;
+  box-shadow: none;
+  border-bottom: 1px solid whitesmoke;
+  padding: 20px 30px;
+}
+
+.fadashBoard .nwPgHdr.bg-white select {
+  border: none;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.fadashBoard .nwPgHdr select.icnBtn {
+  border: 1px solid gray;
+  font-weight: normal;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.fadashBoard .icnBtn {
+  width: max-content;
+  height: 30px;
+  border: 1px solid gray;
+  color: gray;
+}
+
+.fadashBoard .icnBtn.material-icons {
+  font-size: 18px !important;
+}
+
+.fadashBoard .material-icons.fqIcn {
+  color: #79797985;
+  font-size: 18px;
+}
+
+.fadashBoard .admrBtndtls a {
+  font-size: 13px;
+}
+
+.fadashBoard .cstmNavpills {
+  background: #f8f8f8;
+  padding: 8px;
+}
+
+.fadashBoard .cstmNavpills .nav-item .nav-link {
+  padding: 5px;
+  min-width: 130px;
+  font-size: 13px;
+  text-align: center;
+  color: #525252;
+  border-radius: 2px;
+}
+
+.fadashBoard .cstmNavpills .nav-item .nav-link.active {
+  color: white;
+  background: #0c8bbd;
+}
+
+.fadashBoard .inptWrpr {
+  position: relative;
+}
+
+.fadashBoard .inptWrpr .iconBox {
+  width: 32px;
+  height: 32px;
+  padding: 4px;
+  background: rgb(235, 235, 235);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  border: 1px solid var(--borderColor);
+  position: absolute;
+  top: 0;
+  left: 15px;
+}
+
+.fadashBoard .inptWrpr select.iconBox {
+  width: max-content;
+}
+
+.fadashBoard .inptWrpr .iconBox.suffix {
+  right: 15px;
+  left: unset;
+}
+
+.fadashBoard .inptWrpr .iconBox img {
+  width: 14px;
+  height: 14px;
+}
+
+.fadashBoard .inptWrpr.prefix input {
+  padding-left: 40px;
+}
+
+.fadashBoard .infoLn {
+  font-size: 13px;
+}
+
+.fadashBoard .sctnTtle {
+  font-size: 13px;
+}
+
+.fadashBoard .adrsSctns textarea {
+  height: 70px;
+}
+
+.fadashBoard .linkTxt {
+  font-size: 13px;
+  color: #0c8bbd;
+}
+
+.fadashBoard .tblWrpr.frmWrpr table th {
+  padding: 10px;
+}
+
+.fadashBoard .tblWrpr.frmWrpr table td {
+  padding: 0;
+  border-top: 0;
+}
+
+.fadashBoard .tblWrpr.frmWrpr table td .inptWrpr {
+  margin-bottom: 0;
+}
+
+.fadashBoard .tblWrpr.frmWrpr table td .inptWrpr input,
+.fadashBoard .tblWrpr.frmWrpr table td .inptWrpr select {
+  border-radius: 0;
+  padding: 10px;
+}
+
+p {
+  font-size: 13px;
+}
+
+.fadashBoard .adtnlInfo {
+  line-height: 24px;
+}
+
+.fadashBoard .adtnlInfo p {
+  color: #707070;
+}
+
+.fadashBoard .adtnlInfo .material-icons {
+  font-size: 9px;
+  margin: 0 5px;
+}
+
+.fadashBoard .inptWrpr .cstmLbl span {
+  color: #8d8d8d;
+}
+
+.famnCntnr .tpbdrBtn {
+  border-top: 1px dashed #e2e2e2;
+  border-bottom: 1px dashed #e2e2e2;
+  background: #fcfcfc;
+}
+
+.famnCntnr .tpbdrWrpr {
+  border-top: 1px dashed #e2e2e2;
+}
+
+.famnCntnr .tblWrpr.invcTble table {
+  border-collapse: collapse;
+}
+
+.famnCntnr .tblWrpr.invcTble table td input,
+.famnCntnr .tblWrpr.invcTble table td select {
+  min-height: 55px;
+  border: 0;
+}
+
+.famnCntnr .tblWrpr.invcTble table td {
+  border: 1px solid var(--borderColor);
+}
+
+.famnCntnr .tblDscnt select {
+  width: 65px;
+  height: 25px;
+}
+
+body {
+  font-size: 14px;
+}
+
+.famnCntnr .inptWrpr.dshBrdr input {
+  border: 1px dashed var(--borderColor);
+}
+
+.famnCntnr .rateContainer {
+  background-color: #f8f8f8;
+}
+
+.famnCntnr .inptWrpr.adtnlBtns {
+  font-size: 13px;
+}
+
+.famnCntnr .inptWrpr.adtnlBtns .material-icons {
+  font-size: 16px;
+}
+
+.faInrDshbord .nwPgHdr.brdrNone {
+  border-bottom: 0;
+}
+
+.famnCntnr .cstmNvPills {
+  border-bottom: 1px solid gray;
+}
+.famnCntnr .cstmNvPills .nav-item a {
+  color: gray;
+}
+
+.famnCntnr .cstmNvPills.nav-pills .nav-link.active,
+.famnCntnr .cstmNvPills.nav-pills .show > .nav-link {
+  color: var(--primColor);
+  background: transparent;
+  border-radius: 0;
+  border-bottom: 2px solid var(--primColor);
+}
+
+.fadashBoard .faInrDshbord .nwPgHdr h3.wtMdum {
+  font-weight: 600;
+}
+
+.fadashBoard .ovrViewCntnr .lftVndrView {
+  background: whitesmoke;
+  border-right: 1px solid #d6d6d6;
+  min-height: 78vh;
+}
+
+.fadashBoard .faInrDshbord .acrdBtn {
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0;
+  margin-top: 15px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.fadashBoard .faInrDshbord .acrdBtn .material-icons {
+  transform: rotate(180deg);
+  transition: all 0.3s ease-in-out;
+}
+
+.fadashBoard .faInrDshbord .acrdBtn.collapsed .material-icons {
+  transform: rotate(0deg) !important;
+}
+
+.fadashBoard .acrdnInrTitle {
+  font-size: 15px;
+  font-weight: normal;
+  margin: 15px 0;
+  color: gray;
+}
+
+.fadashBoard .faInrDshbord .clpsMenu table.nopdTbl tr td:first-child {
+  padding-left: 0;
+}
+
+.fadashBoard .faInrDshbord .clpsMenu table.nopdTbl tr td:last-child {
+  padding-right: 0;
+}
+
+.fadashBoard .faInrDshbord .clpsMenu table tr td:first-child {
+  color: gray;
+}
+
+.fadashBoard .faInrDshbord .rtVndrView table {
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.fadashBoard .faInrDshbord .rtVndrView table td {
+  border-top: 0;
+}
+
+.fadashBoard #chartdiv {
+  width: 100%;
+  height: 500px;
+}
+
+.fadashBoard .selectDiv select {
+  border: none;
+  color: var(--primColor);
+}
+
+.fadashBoard .tab-pane.cmntWrpr .primButton {
+  max-width: 150px;
+}
+
+.fadashBoard .accrdSelect {
+  border: none;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0;
+  padding-right: 10px;
+}
+
+.fadashBoard .faInrDshbord .salesTabWrapper .acrdBtn p {
+  font-size: 16px;
+}
+
+.fadashBoard .faInrDshbord .salesTabWrapper .acrdBtn select,
+.fadashBoard .faInrDshbord .salesTabWrapper .acrdBtn .btn {
+  font-size: 13px;
+}
+
+.fadashBoard .faInrDshbord .salesTabWrapper .acrdBtn .material-icons {
+  transform: rotate(90deg);
+  transition: all 0.3s ease-in-out;
+}
+
+.fadashBoard .faInrDshbord .salesTabWrapper .acrdBtn.collapsed .material-icons {
+  transform: rotate(0deg) !important;
+}
+
+.fadashBoard .faInrDshbord .inptWrpr.dropdown .btn {
+  font-size: 14px;
+}
+
+.fadashBoard .mailWrapper .mlCntnr .infoWrpr p span {
+  color: rgb(138, 138, 138);
+}
+.fadashBoard .mailWrapper .mlCntnr .infoWrpr .rtWrpr p {
+  color: rgb(138, 138, 138);
+}
+
+.fadashBoard .mailWrapper .mlCntnr .infoWrpr .rtWrpr .mlSize {
+  min-width: 150px;
+}
+.fadashBoard .mailWrapper .mlCntnr .ml-icon .material-icons {
+  font-size: 19px;
+  padding-top: 3px;
+  color: gray;
+}
+
+.fadashBoard .mailWrapper .mlCntnr {
+  border-bottom: 1px solid gray;
+  padding: 10px 0;
+}
+
+.fadashBoard .prdSlctWrpr {
+  position: relative;
+}
+.fadashBoard .prdSlctWrpr span.material-icons.prefix {
+  font-size: 16px;
+  top: 8px;
+}
+.fadashBoard .prdSlctWrpr span.prefix {
+  position: absolute;
+  left: 8px;
+  top: 5px;
+  color: rgb(156, 156, 156);
+}
+
+.fadashBoard .xlsButton {
+  width: 50px;
+}
+.fadashBoard .xlsButton img {
+  width: 20px;
+}
+
+.fadashBoard .vndrBtnStck .icnBtn {
+  background-color: whitesmoke;
+  border: none;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.fadashBoard .primButton.bluBtn {
+  background: var(--primColor);
+  height: 32px;
+}
+
+.fadashBoard .inptWrpr.amtInptWtSlct select {
+  max-width: 80px;
+  border-radius: 2px 0 0 2px;
+  background: whitesmoke;
+}
+
+.fadashBoard .inptWrpr.amtInptWtSlct input {
+  border-radius: 0 2px 2px 0;
+}
+
+.fadashBoard .whtSmkBack {
+  background-color: rgb(250, 250, 250);
+}
+
+.fadashBoard .expnsTbWrpr .drgDrpWrpr {
+  width: 273px;
+  height: 360px;
+  border: 1px solid #e6e6e6;
+}
+
+.fadashBoard .expnsTbWrpr .drgDrpWrpr .drgDrpArea {
+  height: 90%;
+  background-color: white;
+}
+
+.fadashBoard .expnsTbWrpr .drgDrpWrpr .drgDrpArea label {
+  font-size: 14px;
+  text-align: center;
+}
+
+.fadashBoard .expnsTbWrpr .drgDrpWrpr .drgDrpArea label span {
+  font-size: 12px;
+  color: #525252;
+}
+
+.fadashBoard .expnsTbWrpr .drgDrpWrpr .atchRprt {
+  height: 10%;
+  border: 1px solid #e6e6e6;
+}
+
+.fadashBoard .inptWrpr .suffixWrpr {
+  background: #e6e6e6;
+  padding: 0 10px;
+  height: 32px;
+  border: 1px solid var(--borderColor);
+  border-left: 1px solid transparent;
+  font-size: 12px;
+}
+
+.fadashBoard .dropdown-menu {
+  font-size: 13px;
+}
+.fadashBoard .dropdown-menu .material-icons-outlined {
+  font-size: 16px;
+}
+
+.fadashBoard .table.vwTable input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+}
+
+.fadashBoard .chckWrprNe label {
+  white-space: pre;
+}
+
+.fadashBoard .dropdown-menu.adrsDropMenu {
+  width: 100%;
+  max-width: 250px;
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.fadashBoard .inptWrpr .dscntSlctWraper {
+  width: unset;
+  min-width: unset;
+  background: whitesmoke;
+}
+
+.fadashBoard .cstmLbl .plnIcnBtn .material-icons {
+  font-size: 17px;
+}
+
+.fadashBoard .hdrCheckBox label,
+.fadashBoard .scHdr {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.fadashBoard .hdrCheckBox input[type="checkbox"] {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.fadashBoard .ovrVwTbl td {
+  border: none;
+}
+
+.fadashBoard .ovrVwTbl tr td:first-child {
+  width: 25%;
+  opacity: 0.7;
+}
+
+.fadashBoard .switchLabel {
+  font-size: 15px;
+}
+
+.fadashBoard ul li {
+  font-size: 13px;
+}
+
+.fadashBoard .btn.lnkBtn {
+  font-size: 13px;
+  color: var(--primColor);
+}
+
+.fadashBoard .btn.lnkBtn .material-icons-outlined {
+  font-size: 18px;
+  margin-right: 6px;
+}
+
+.fadashBoard .slctPrfix {
+  position: relative;
+}
+
+.fadashBoard .slctPrfix select {
+  position: relative;
+  padding-left: 52px;
+}
+
+.fadashBoard .slctPrfix .prefix {
+  position: absolute;
+  top: 6.5px;
+  left: 8px;
+  font-size: 13px;
+  color: #979797;
+  z-index: 9;
+}
+
+.fadashBoard .w-max {
+  width: max-content;
+}

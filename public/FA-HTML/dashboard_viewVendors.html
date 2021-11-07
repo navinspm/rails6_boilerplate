@@ -1,0 +1,1878 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GwayERP-F&A</title>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Boostrap css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- google-material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- css stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- font css -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body>
+    <div class="fadashBoard d-flex align-items-start">
+        <div class="mainLftNavbar d-flex flex-column" id="sdBrToggle">
+            <div class="lgContainer">
+                <img id="mainLogo" src="./assets/FandAlogo.png" alt="">
+                <div id="hamMenuIcon" class="material-icons mnuTglIcon d-none" onclick="sideBarToggle()">menu</div>
+            </div>
+            <div class="prflContents">
+                <img class="prflImg" src="./assets/no_profile.png" alt="">
+                <h2 class="usrNme">Bruce Wayne</h2>
+                <a href="" class="usrEmlId">bruce_wayne@gwayerp.com</a>
+            </div>
+            <div class="navTabsWrapper">
+                <a class="btn lftNvBtn active" type="button">
+                    <img class="navIcons" src="./assets/dashboard.svg" alt="">
+                    Dashboard
+                </a>
+                <a class="btn lftNvBtn" type="button">
+                    <img class="navIcons" src="./assets/items.svg" alt="">
+                    Items
+                    <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                </a>
+                <a class="btn lftNvBtn acrdBtn collapsed" type="button" data-toggle="collapse"
+                    data-target="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1">
+                    <p class="m-0">
+                        <img class="navIcons" src="./assets/bank.svg" alt="">
+                        Banking
+                    </p>
+                    <span class="material-icons">expand_more</span>
+                </a>
+                <div class="collapse multi-collapse clpsMenu" id="multiCollapseExample1">
+                    <button class="btn inrLftBtn lftNvBtn active" type="button">
+                        Estimates
+                    </button>
+                    <button class="btn inrLftBtn lftNvBtn" type="button">
+                        Orders
+                    </button>
+                </div>
+                <a class="btn lftNvBtn acrdBtn collapsed" type="button" data-toggle="collapse"
+                    data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">
+                    <p class="m-0">
+                        <img class="navIcons" src="./assets/sales.svg" alt="">
+                        Sales
+                    </p>
+                    <span class="material-icons">expand_more</span>
+                </a>
+                <div class="collapse multi-collapse clpsMenu" id="multiCollapseExample2">
+                    <button class="btn inrLftBtn lftNvBtn active" type="button">
+                        Estimates
+                    </button>
+                    <button class="btn inrLftBtn lftNvBtn" type="button">
+                        Orders
+                    </button>
+                </div>
+                <a class="btn lftNvBtn acrdBtn collapsed" type="button" data-toggle="collapse"
+                    data-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">
+                    <p class="m-0">
+                        <img class="navIcons" src="./assets/purchase.svg" alt="">
+                        Purchase
+                    </p>
+                    <span class="material-icons">expand_more</span>
+                </a>
+                <div class="collapse multi-collapse clpsMenu" id="multiCollapseExample3">
+                    <button class="btn inrLftBtn lftNvBtn active" type="button">
+                        Estimates
+                    </button>
+                    <button class="btn inrLftBtn lftNvBtn" type="button">
+                        Orders
+                    </button>
+                </div>
+
+                <!-- vouchers tab -->
+
+                <a class="btn lftNvBtn acrdBtn collapsed" type="button" data-toggle="collapse"
+                    data-target="#multiCollapseExample6" aria-expanded="false" aria-controls="multiCollapseExample6">
+                    <p class="m-0">
+                        <img class="navIcons" src="./assets/vouchers.svg" alt="">
+                        Vouchers
+                    </p>
+                    <span class="material-icons">expand_more</span>
+                </a>
+                <div class="collapse multi-collapse clpsMenu" id="multiCollapseExample6">
+                    <a class="btn inrLftBtn lftNvBtn active" type="button">
+                        Purchase Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Sales Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Debit Note Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Credit Note Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Receipt Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Post Dated Receipt Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Payment Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Post Dated Payment Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Journal Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Contra Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Memorandum Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Reversing Journal Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+
+                </div>
+
+                <!-- voucher tab end -->
+
+                <a class="btn lftNvBtn acrdBtn collapsed" type="button" data-toggle="collapse"
+                    data-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4">
+                    <p class="m-0">
+                        <img class="navIcons" src="./assets/report.svg" alt="">
+                        Reports
+                    </p>
+                    <span class="material-icons">expand_more</span>
+                </a>
+                <div class="collapse multi-collapse clpsMenu" id="multiCollapseExample4">
+                    <button class="btn inrLftBtn lftNvBtn active" type="button">
+                        Estimates
+                    </button>
+                    <button class="btn inrLftBtn lftNvBtn" type="button">
+                        Orders
+                    </button>
+                </div>
+
+
+                <a class="btn lftNvBtn acrdBtn collapsed" type="button" data-toggle="collapse"
+                    data-target="#multiCollapseExample5" aria-expanded="false" aria-controls="multiCollapseExample5">
+                    <p class="m-0">
+                        <img class="navIcons" src="./assets/accountant.svg" alt="">
+                        Accountant
+                    </p>
+                    <span class="material-icons">expand_more</span>
+                </a>
+                <div class="collapse multi-collapse clpsMenu" id="multiCollapseExample5">
+                    <button class="btn inrLftBtn lftNvBtn active" type="button">
+                        Estimates
+                    </button>
+                    <button class="btn inrLftBtn lftNvBtn" type="button">
+                        Orders
+                    </button>
+                </div>
+            </div>
+            <div class="adtnNavBtns">
+                <a class="btn lftNvBtn adtnBtns">
+                    <img class="navIcons" src="./assets/settings.svg" alt="">
+                    Settings
+                </a>
+                <a class="btn lftNvBtn adtnBtns">
+                    <img class="navIcons" src="./assets/logout.svg" alt="">
+                    Logout
+                </a>
+                <button class="btn hdBtn p-0" onclick="sideBarToggle()"><img src="./assets/hideBtn.svg" alt=""></button>
+            </div>
+        </div>
+        <div class="faInrDshbord w-100">
+            <div class="tpNvBar">
+                <div class="infoIcons">
+                    <a href="" class="notiInfoIcons"><img src="./assets/notification.svg" alt="">
+                        <span class="ntiCntCrcl">02</span>
+                    </a>
+                    <a href="" class="notiInfoIcons"><img src="./assets/settings_white.svg" alt=""> </a>
+                    <a href="" class="notiInfoIcons"><img src="./assets/faq.svg" alt=""> </a>
+                </div>
+            </div>
+            <div class="nwPgHdr brdrNone bg-white d-flex align-items-center justify-content-between">
+                <h3 class="inptWrpr wtMdum">
+                    Registered Vendor
+                </h3>
+                <div class="btnStk d-flex align-items-center">
+                    <a href="" class="btn icnBtn ml-2">Edit</a>
+                    <select class="icnBtn ml-2 pl-2 pr-2" name="" id="">
+                        <option value="">more</option>
+                    </select>
+                </div>
+            </div>
+            <div class="famnCntnr pt-1">
+                <ul class="cstmNvPills nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="pills-overview-tab" data-toggle="pill" href="#pills-overview"
+                            role="tab" aria-controls="pills-overview" aria-selected="true">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pills-comments-tab" data-toggle="pill" href="#pills-comments" role="tab"
+                            aria-controls="pills-comments" aria-selected="false">Comments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pills-sales-tab" data-toggle="pill" href="#pills-sales" role="tab"
+                            aria-controls="pills-sales" aria-selected="false">Sales</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pills-purchases-tab" data-toggle="pill" href="#pills-purchases"
+                            role="tab" aria-controls="pills-purchases" aria-selected="false">Purchases</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pills-relatedList-tab" data-toggle="pill" href="#pills-relatedList"
+                            role="tab" aria-controls="pills-relatedList" aria-selected="false">Related Lists</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pills-mails-tab" data-toggle="pill" href="#pills-mails" role="tab"
+                            aria-controls="pills-mails" aria-selected="false">Mails</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pills-statement-tab" data-toggle="pill" href="#pills-statement"
+                            role="tab" aria-controls="pills-statement" aria-selected="false">Statement</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-overview" role="tabpanel"
+                        aria-labelledby="pills-overview-tab">
+                        <div class="row mx-0 ovrViewCntnr">
+                            <div class="col-3 lftVndrView py-4">
+                                <p class="m-0 mb-1">Reynolds, Bartell and Lesch</p>
+                                <hr />
+                                <p class="m-0 mb-1">First_Name&nbsp;last_name</p>
+                                <p class="m-0 mb-1">Designatio, Department</p>
+                                <p class="m-0 mb-1">email_address</p>
+                                <p class="m-0 mb-1">workPhone, phone</p>
+                                <p class="m-0">skypenumber</p>
+
+                                <a class="btn acrdBtn collapsed" type="button" data-toggle="collapse"
+                                    data-target="#addrsAccordion" aria-expanded="false" aria-controls="addrsAccordion">
+                                    <p class="m-0 justify-content-between">
+                                        ADDRESS
+                                    </p>
+                                    <span class="material-icons">expand_more</span>
+                                </a>
+                                <div class="collapse multi-collapse clpsMenu" id="addrsAccordion">
+                                    <h6 class="acrdnInrTitle">Billing Address</h6>
+                                    <p class="m-0 mb-1">First_Name&nbsp;last_name</p>
+                                    <p class="m-0 mb-1">Designatio, Department</p>
+                                    <p class="m-0 mb-1">email_address</p>
+                                    <p class="m-0 mb-1">workPhone, phone</p>
+                                    <p class="m-0">skypenumber</p>
+                                    <h6 class="acrdnInrTitle mt-4">Shipping Address</h6>
+                                    <p class="m-0 mb-1">First_Name&nbsp;last_name</p>
+                                    <p class="m-0 mb-1">Designatio, Department</p>
+                                    <p class="m-0 mb-1">email_address</p>
+                                    <p class="m-0 mb-1">workPhone, phone</p>
+                                    <p class="m-0">skypenumber</p>
+                                </div>
+
+                                <a class="btn acrdBtn collapsed" type="button" data-toggle="collapse"
+                                    data-target="#rmrksAccordion" aria-expanded="false" aria-controls="rmrksAccordion">
+                                    <p class="m-0 justify-content-between">
+                                        REMARKS
+                                    </p>
+                                    <span class="material-icons">expand_more</span>
+                                </a>
+                                <div class="collapse multi-collapse clpsMenu" id="rmrksAccordion">
+                                    <p class="py-2">lorem ipsum dolor sit amet</p>
+                                </div>
+
+                                <a class="btn acrdBtn collapsed" type="button" data-toggle="collapse"
+                                    data-target="#othrDtlsAccordion" aria-expanded="false"
+                                    aria-controls="othrDtlsAccordion">
+                                    <p class="m-0 justify-content-between">
+                                        OTHER DETAILS
+                                    </p>
+                                    <span class="material-icons">expand_more</span>
+                                </a>
+                                <div class="collapse multi-collapse clpsMenu" id="othrDtlsAccordion">
+                                    <table class="table nopdTbl pt-2">
+                                        <tr>
+                                            <td>Currency Code</td>
+                                            <td>INR</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Website</td>
+                                            <td>https://sample.org</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Pricelist</td>
+                                            <td>Pricebook0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>GST Treatment</td>
+                                            <td>Registered business regular</td>
+                                        </tr>
+                                        <tr>
+                                            <td>GSTIN</td>
+                                            <td>21ABCDE1234F1Z6</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Source of Supply</td>
+                                            <td></td>
+                                        </tr>
+
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="col-9 rtVndrView py-4">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <h6>Oustanding Receivables</h6>
+                                        <h4 class="mt-4 text-primary">₹581</h4>
+                                    </div>
+                                    <div class="col-6">
+                                        <table class="table">
+                                            <tr>
+                                                <td>Unused Credits</td>
+                                                <td><b>₹120</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Unused Credits</td>
+                                                <td><b>Net 60</b></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="col-6">
+                                        <h6>Oustanding Payables</h6>
+                                        <h4 class="mt-4 text-primary">₹581</h4>
+                                    </div>
+                                    <div class="col-6">
+                                        <table class="table">
+                                            <tr>
+                                                <td>Unused Credits</td>
+                                                <td><b>₹120</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Unused Credits</td>
+                                                <td><b>Net 60</b></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <p>Opening balance <span class="text-primary"><b>₹120</b></span></p>
+                                <div class="mt-4">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <p>EXPENSES</p>
+                                        <div class="selectDiv">
+                                            <select name="" id="">
+                                                <option value="">Last 6 Months</option>
+                                            </select>
+                                            <select name="" id="">
+                                                <option value="">Accural</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div id="chartdiv"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade p-4 cmntWrpr" id="pills-comments" role="tabpanel"
+                        aria-labelledby="pills-comments-tab">
+                        <form action="">
+                            <div class="inptWrpr">
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                            </div>
+                            <a href="" class="btn primButton">Add Comment</a>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="pills-sales" role="tabpanel" aria-labelledby="pills-sales-tab">
+                        <div class="row">
+                            <div class="inptWrpr col-4">
+                                <select name="" id="">
+                                    <option value="">Go to transactions</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="salesTabWrapper">
+                            <div class="btn acrdBtn collapsed" type="button" data-toggle="collapse"
+                                data-target="#slsInvcAcrdn" aria-expanded="false" aria-controls="slsInvcAcrdn">
+                                <div class="d-flex align-items-center">
+                                    <span class="material-icons">chevron_right</span>
+                                    <p class="m-0 justify-content-between">
+                                        Invoices
+                                    </p>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <label for="" class="mr-2">Status</label>
+                                    <select name="" id="" class="accrdSelect text-primary">
+                                        <option value="">All</option>
+                                    </select>
+                                    <a href="" class="btn text-primary">+ Add New</a>
+
+                                </div>
+                            </div>
+                            <div class="collapse multi-collapse clpsMenu" id="slsInvcAcrdn">
+                                <div class="famnCntnr">
+                                    <div class="tblWrpr">
+                                        <table class="table vwTable">
+                                            <thead>
+                                                <tr>
+                                                    <th>date</th>
+                                                    <th>invoice#</th>
+                                                    <th>reference#</th>
+                                                    <th class="text-right">Amount</th>
+                                                    <th class="text-right">Balance Due</th>
+                                                    <th>Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>12/12/2020</td>
+                                                    <td>12345678</td>
+                                                    <td>12345678</td>
+                                                    <td class="text-right">₹120</td>
+                                                    <td class="text-right">₹120</td>
+                                                    <td>Draft</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>12/12/2020</td>
+                                                    <td>12345678</td>
+                                                    <td>12345678</td>
+                                                    <td class="text-right">₹120</td>
+                                                    <td class="text-right">₹120</td>
+                                                    <td>Draft</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>12/12/2020</td>
+                                                    <td>12345678</td>
+                                                    <td>12345678</td>
+                                                    <td class="text-right">₹120</td>
+                                                    <td class="text-right">₹120</td>
+                                                    <td>Draft</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>12/12/2020</td>
+                                                    <td>12345678</td>
+                                                    <td>12345678</td>
+                                                    <td class="text-right">₹120</td>
+                                                    <td class="text-right">₹120</td>
+                                                    <td>Draft</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="btn acrdBtn collapsed" type="button" data-toggle="collapse"
+                                data-target="#slsCstmrPymntAcrdn" aria-expanded="false"
+                                aria-controls="slsCstmrPymntAcrdn">
+                                <div class="d-flex align-items-center">
+                                    <span class="material-icons">chevron_right</span>
+                                    <p class="m-0 justify-content-between">
+                                        Customer Payment
+                                    </p>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <label for="" class="mr-2">Status</label>
+                                    <select name="" id="" class="accrdSelect text-primary">
+                                        <option value="">All</option>
+                                    </select>
+                                    <a href="" class="btn text-primary">+ Add New</a>
+
+                                </div>
+                            </div>
+                            <div class="collapse multi-collapse clpsMenu" id="slsCstmrPymntAcrdn">
+                                <div class="famnCntnr">
+                                    <div class="tblWrpr">
+                                        <table class="table vwTable">
+                                            <thead>
+                                                <tr>
+                                                    <th>date</th>
+                                                    <th>invoice#</th>
+                                                    <th>reference#</th>
+                                                    <th>Payment Mode</th>
+                                                    <th class="text-right">Amount Received</th>
+                                                    <th class="text-right">Unused Amount</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>12/12/2020</td>
+                                                    <td>12345678</td>
+                                                    <td>12345678</td>
+                                                    <td>Stripe</td>
+                                                    <td class="text-right">₹120</td>
+                                                    <td class="text-right">₹120</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="btn acrdBtn collapsed" type="button" data-toggle="collapse"
+                                data-target="#slsEstAccord" aria-expanded="false" aria-controls="slsEstAccord">
+                                <div class="d-flex align-items-center">
+                                    <span class="material-icons">chevron_right</span>
+                                    <p class="m-0 justify-content-between">
+                                        Estimates
+                                    </p>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <label for="" class="mr-2">Status</label>
+                                    <select name="" id="" class="accrdSelect text-primary">
+                                        <option value="">All</option>
+                                    </select>
+                                    <a href="" class="btn text-primary">+ Add New</a>
+
+                                </div>
+                            </div>
+                            <div class="collapse multi-collapse clpsMenu" id="slsEstAccord">
+                                <div class="famnCntnr">
+                                    <div class="tblWrpr">
+                                        <table class="table vwTable">
+                                            <thead>
+                                                <tr>
+                                                    <th>Date</th>
+                                                    <th>Estimate#</th>
+                                                    <th>Reference#</th>
+                                                    <th class="text-right">Amount</th>
+                                                    <th>Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>9 Sep 2020</td>
+                                                    <td>EST-0000</td>
+                                                    <td>48427</td>
+                                                    <td class="text-right">₹98485</td>
+                                                    <td>Draft</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>9 Sep 2020</td>
+                                                    <td>EST-0000</td>
+                                                    <td>48427</td>
+                                                    <td class="text-right">₹98485</td>
+                                                    <td>Draft</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>9 Sep 2020</td>
+                                                    <td>EST-0000</td>
+                                                    <td>48427</td>
+                                                    <td class="text-right">₹98485</td>
+                                                    <td>Draft</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>9 Sep 2020</td>
+                                                    <td>EST-0000</td>
+                                                    <td>48427</td>
+                                                    <td class="text-right">₹98485</td>
+                                                    <td>Draft</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="btn acrdBtn collapsed" type="button" data-toggle="collapse"
+                                data-target="#slsRIAccord" aria-expanded="false" aria-controls="slsRIAccord">
+                                <div class="d-flex align-items-center">
+                                    <span class="material-icons">chevron_right</span>
+                                    <p class="m-0 justify-content-between">
+                                        Retainer Invoice
+                                    </p>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <label for="" class="mr-2">Status</label>
+                                    <select name="" id="" class="accrdSelect text-primary">
+                                        <option value="">All</option>
+                                    </select>
+                                    <a href="" class="btn text-primary">+ Add New</a>
+
+                                </div>
+                            </div>
+                            <div class="collapse multi-collapse clpsMenu" id="slsRIAccord">
+                                <div class="famnCntnr">
+                                    <div class="tblWrpr">
+                                        <table class="table vwTable">
+                                            <thead>
+                                                <tr>
+                                                    <th>Profile Name</th>
+                                                    <th>Frequency</th>
+                                                    <th>Last invoice date</th>
+                                                    <th>next invoice date</th>
+                                                    <th>Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Robin hood</td>
+                                                    <td>2</td>
+                                                    <td>22 Apr 2020</td>
+                                                    <td>22 May 2020</td>
+                                                    <td>Draft</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Robin hood</td>
+                                                    <td>2</td>
+                                                    <td>22 Apr 2020</td>
+                                                    <td>22 May 2020</td>
+                                                    <td>Draft</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Robin hood</td>
+                                                    <td>2</td>
+                                                    <td>22 Apr 2020</td>
+                                                    <td>22 May 2020</td>
+                                                    <td>Draft</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Robin hood</td>
+                                                    <td>2</td>
+                                                    <td>22 Apr 2020</td>
+                                                    <td>22 May 2020</td>
+                                                    <td>Draft</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="btn acrdBtn collapsed" type="button" data-toggle="collapse"
+                                data-target="#slsSlOrdrAccord" aria-expanded="false" aria-controls="slsSlOrdrAccord">
+                                <div class="d-flex align-items-center">
+                                    <span class="material-icons">chevron_right</span>
+                                    <p class="m-0 justify-content-between">
+                                        Sales Order
+                                    </p>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <label for="" class="mr-2">Status</label>
+                                    <select name="" id="" class="accrdSelect text-primary">
+                                        <option value="">All</option>
+                                    </select>
+                                    <a href="" class="btn text-primary">+ Add New</a>
+
+                                </div>
+                            </div>
+                            <div class="collapse multi-collapse clpsMenu" id="slsSlOrdrAccord">
+                                <div class="famnCntnr">
+                                    <div class="tblWrpr">
+                                        <table class="table vwTable">
+                                            <thead>
+                                                <tr>
+                                                    <th>sales order</th>
+                                                    <th>reference#</th>
+                                                    <th>date</th>
+                                                    <th>Shipment Date</th>
+                                                    <th class="text-right">Amount</th>
+                                                    <th>Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>SO-0000</td>
+                                                    <td>REF-SO-000</td>
+                                                    <td>19 Apr 2020</td>
+                                                    <td>24 Apr 2020</td>
+                                                    <td class="text-right">₹98485</td>
+                                                    <td>Draft</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>SO-0000</td>
+                                                    <td>REF-SO-000</td>
+                                                    <td>19 Apr 2020</td>
+                                                    <td>24 Apr 2020</td>
+                                                    <td class="text-right">₹98485</td>
+                                                    <td>Draft</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>SO-0000</td>
+                                                    <td>REF-SO-000</td>
+                                                    <td>19 Apr 2020</td>
+                                                    <td>24 Apr 2020</td>
+                                                    <td class="text-right">₹98485</td>
+                                                    <td>Draft</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>SO-0000</td>
+                                                    <td>REF-SO-000</td>
+                                                    <td>19 Apr 2020</td>
+                                                    <td>24 Apr 2020</td>
+                                                    <td class="text-right">₹98485</td>
+                                                    <td>Draft</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="btn acrdBtn collapsed" type="button" data-toggle="collapse"
+                                data-target="#slsDlvrChlanAccord" aria-expanded="false"
+                                aria-controls="slsDlvrChlanAccord">
+                                <div class="d-flex align-items-center">
+                                    <span class="material-icons">chevron_right</span>
+                                    <p class="m-0 justify-content-between">
+                                        Delivery Challan
+                                    </p>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <label for="" class="mr-2">Status</label>
+                                    <select name="" id="" class="accrdSelect text-primary">
+                                        <option value="">All</option>
+                                    </select>
+                                    <a href="" class="btn text-primary">+ Add New</a>
+
+                                </div>
+                            </div>
+                            <div class="collapse multi-collapse clpsMenu" id="slsDlvrChlanAccord">
+                                <div class="famnCntnr">
+                                    <div class="tblWrpr">
+                                        <table class="table vwTable">
+                                            <thead>
+                                                <tr>
+                                                    <th>Delivery Challan#</th>
+                                                    <th>reference#</th>
+                                                    <th>Date</th>
+                                                    <th class="text-right">Amount</th>
+                                                    <th>Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>DC-0000</td>
+                                                    <td>55481</td>
+                                                    <td>19 Dec 2020</td>
+                                                    <td class="text-right">₹54277</td>
+                                                    <td>Returned</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>DC-0000</td>
+                                                    <td>55481</td>
+                                                    <td>19 Dec 2020</td>
+                                                    <td class="text-right">₹54277</td>
+                                                    <td>Returned</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>DC-0000</td>
+                                                    <td>55481</td>
+                                                    <td>19 Dec 2020</td>
+                                                    <td class="text-right">₹54277</td>
+                                                    <td>Returned</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>DC-0000</td>
+                                                    <td>55481</td>
+                                                    <td>19 Dec 2020</td>
+                                                    <td class="text-right">₹54277</td>
+                                                    <td>Returned</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="btn acrdBtn collapsed" type="button" data-toggle="collapse"
+                                data-target="#riAccord" aria-expanded="false" aria-controls="riAccord">
+                                <div class="d-flex align-items-center">
+                                    <span class="material-icons">chevron_right</span>
+                                    <p class="m-0 justify-content-between">
+                                        Recurring Invoice
+                                    </p>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <label for="" class="mr-2">Status</label>
+                                    <select name="" id="" class="accrdSelect text-primary">
+                                        <option value="">All</option>
+                                    </select>
+                                    <a href="" class="btn text-primary">+ Add New</a>
+
+                                </div>
+                            </div>
+                            <div class="collapse multi-collapse clpsMenu" id="riAccord">
+                                <div class="famnCntnr">
+                                    <div class="tblWrpr">
+                                        <table class="table vwTable">
+                                            <thead>
+                                                <tr>
+                                                    <th>Profile Name</th>
+                                                    <th>Frequency</th>
+                                                    <th>Last Invoice Date</th>
+                                                    <th>Next Invoice Date</th>
+                                                    <th>Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Project_1</td>
+                                                    <td>2</td>
+                                                    <td>12/12/2020</td>
+                                                    <td>12/12/2021</td>
+                                                    <td>Paid</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Project_1</td>
+                                                    <td>2</td>
+                                                    <td>12/12/2020</td>
+                                                    <td>12/12/2021</td>
+                                                    <td>Paid</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Project_1</td>
+                                                    <td>2</td>
+                                                    <td>12/12/2020</td>
+                                                    <td>12/12/2021</td>
+                                                    <td>Paid</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="btn acrdBtn collapsed" type="button" data-toggle="collapse"
+                                data-target="#expenseAccord" aria-expanded="false" aria-controls="expenseAccord">
+                                <div class="d-flex align-items-center">
+                                    <span class="material-icons">chevron_right</span>
+                                    <p class="m-0 justify-content-between">
+                                        Expenses
+                                    </p>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <label for="" class="mr-2">Status</label>
+                                    <select name="" id="" class="accrdSelect text-primary">
+                                        <option value="">All</option>
+                                    </select>
+                                    <a href="" class="btn text-primary">+ Add New</a>
+
+                                </div>
+                            </div>
+                            <div class="collapse multi-collapse clpsMenu" id="expenseAccord">
+                                <div class="famnCntnr">
+                                    <div class="tblWrpr">
+                                        <table class="table vwTable">
+                                            <thead>
+                                                <tr>
+                                                    <th>Date</th>
+                                                    <th>Expense Category</th>
+                                                    <th>Reference #</th>
+                                                    <th class="text-right">Amount</th>
+                                                    <th>Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>12/12/2020</td>
+                                                    <td>Expense_one</td>
+                                                    <td>123456</td>
+                                                    <td>₹120</td>
+                                                    <td>₹120</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>12/12/2020</td>
+                                                    <td>Expense_one</td>
+                                                    <td>123456</td>
+                                                    <td>₹120</td>
+                                                    <td>₹120</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="btn acrdBtn collapsed" type="button" data-toggle="collapse"
+                                data-target="#recuringExpAccord" aria-expanded="false"
+                                aria-controls="recuringExpAccord">
+                                <div class="d-flex align-items-center">
+                                    <span class="material-icons">chevron_right</span>
+                                    <p class="m-0 justify-content-between">
+                                        Recurring Expense
+                                    </p>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <label for="" class="mr-2">Status</label>
+                                    <select name="" id="" class="accrdSelect text-primary">
+                                        <option value="">All</option>
+                                    </select>
+                                    <a href="" class="btn text-primary">+ Add New</a>
+
+                                </div>
+                            </div>
+                            <div class="collapse multi-collapse clpsMenu" id="recuringExpAccord">
+                                <div class="famnCntnr">
+                                    <div class="tblWrpr">
+                                        <table class="table vwTable">
+                                            <thead>
+                                                <tr>
+                                                    <th>Profile Name</th>
+                                                    <th>Expense Category</th>
+                                                    <th>Frequency</th>
+                                                    <th>Last Expense Date</th>
+                                                    <th>Next Expense Date</th>
+                                                    <th>Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Project_1</td>
+                                                    <td>Expense_one</td>
+                                                    <td>2</td>
+                                                    <td>12/12/2020</td>
+                                                    <td>12/12/2021</td>
+                                                    <td>Paid</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Project_1</td>
+                                                    <td>Expense_one</td>
+                                                    <td>2</td>
+                                                    <td>12/12/2020</td>
+                                                    <td>12/12/2021</td>
+                                                    <td>Paid</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Project_1</td>
+                                                    <td>Expense_one</td>
+                                                    <td>2</td>
+                                                    <td>12/12/2020</td>
+                                                    <td>12/12/2021</td>
+                                                    <td>Paid</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="btn acrdBtn collapsed" type="button" data-toggle="collapse"
+                                data-target="#slsProjectAccord" aria-expanded="false" aria-controls="slsProjectAccord">
+                                <div class="d-flex align-items-center">
+                                    <span class="material-icons">chevron_right</span>
+                                    <p class="m-0 justify-content-between">
+                                        Project
+                                    </p>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <label for="" class="mr-2">Status</label>
+                                    <select name="" id="" class="accrdSelect text-primary">
+                                        <option value="">All</option>
+                                    </select>
+                                    <a href="" class="btn text-primary">+ Add New</a>
+
+                                </div>
+                            </div>
+                            <div class="collapse multi-collapse clpsMenu" id="slsProjectAccord">
+                                <div class="famnCntnr">
+                                    <div class="tblWrpr">
+                                        <table class="table vwTable">
+                                            <thead>
+                                                <tr>
+                                                    <th>Project Name</th>
+                                                    <th>Billing Method</th>
+                                                    <th>Rate</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Project_1</td>
+                                                    <td>Based on task hours</td>
+                                                    <td>₹3052</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Project_1</td>
+                                                    <td>Based on task hours</td>
+                                                    <td>₹3052</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Project_1</td>
+                                                    <td>Based on task hours</td>
+                                                    <td>₹3052</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="btn acrdBtn collapsed" type="button" data-toggle="collapse"
+                                data-target="#journalsAccord" aria-expanded="false" aria-controls="journalsAccord">
+                                <div class="d-flex align-items-center">
+                                    <span class="material-icons">chevron_right</span>
+                                    <p class="m-0 justify-content-between">
+                                        Journals
+                                    </p>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <label for="" class="mr-2">Status</label>
+                                    <select name="" id="" class="accrdSelect text-primary">
+                                        <option value="">All</option>
+                                    </select>
+                                    <a href="" class="btn text-primary">+ Add New</a>
+
+                                </div>
+                            </div>
+                            <div class="collapse multi-collapse clpsMenu" id="journalsAccord">
+                                <div class="famnCntnr">
+                                    <div class="tblWrpr">
+                                        <table class="table vwTable">
+                                            <thead>
+                                                <tr>
+                                                    <th>Date</th>
+                                                    <th>Journal#</th>
+                                                    <th>Reference#</th>
+                                                    <th>Debit</th>
+                                                    <th>Credit</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>02/02/2021</td>
+                                                    <td>6</td>
+                                                    <td>2011</td>
+                                                    <td>₹120</td>
+                                                    <td>₹120</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>02/02/2021</td>
+                                                    <td>6</td>
+                                                    <td>2011</td>
+                                                    <td>₹120</td>
+                                                    <td>₹120</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>02/02/2021</td>
+                                                    <td>6</td>
+                                                    <td>2011</td>
+                                                    <td>₹120</td>
+                                                    <td>₹120</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>02/02/2021</td>
+                                                    <td>6</td>
+                                                    <td>2011</td>
+                                                    <td>₹120</td>
+                                                    <td>₹120</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="btn acrdBtn collapsed" type="button" data-toggle="collapse"
+                                data-target="#billAccords" aria-expanded="false" aria-controls="billAccords">
+                                <div class="d-flex align-items-center">
+                                    <span class="material-icons">chevron_right</span>
+                                    <p class="m-0 justify-content-between">
+                                        Bill
+                                    </p>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <label for="" class="mr-2">Status</label>
+                                    <select name="" id="" class="accrdSelect text-primary">
+                                        <option value="">All</option>
+                                    </select>
+                                    <a href="" class="btn text-primary">+ Add New</a>
+
+                                </div>
+                            </div>
+                            <div class="collapse multi-collapse clpsMenu" id="billAccords">
+                                <div class="famnCntnr">
+                                    <div class="tblWrpr">
+                                        <table class="table vwTable">
+                                            <thead>
+                                                <tr>
+                                                    <th>Date</th>
+                                                    <th>Bill#</th>
+                                                    <th>Reference#</th>
+                                                    <th>Vendor Name</th>
+                                                    <th class="text-right">Amount</th>
+                                                    <th class="text-right">Balance Due</th>
+                                                    <th>Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>02/02/2021</td>
+                                                    <td>Bill-0</td>
+                                                    <td>35943</td>
+                                                    <td>Registered Vendor</td>
+                                                    <td>₹703.365812</td>
+                                                    <td>₹546.0124215</td>
+                                                    <td>Draft</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>02/02/2021</td>
+                                                    <td>Bill-0</td>
+                                                    <td>35943</td>
+                                                    <td>Registered Vendor</td>
+                                                    <td>₹703.365812</td>
+                                                    <td>₹546.0124215</td>
+                                                    <td>Draft</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>02/02/2021</td>
+                                                    <td>Bill-0</td>
+                                                    <td>35943</td>
+                                                    <td>Registered Vendor</td>
+                                                    <td>₹703.365812</td>
+                                                    <td>₹546.0124215</td>
+                                                    <td>Draft</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="btn acrdBtn collapsed" type="button" data-toggle="collapse"
+                                data-target="#crdtNtAccord" aria-expanded="false" aria-controls="crdtNtAccord">
+                                <div class="d-flex align-items-center">
+                                    <span class="material-icons">chevron_right</span>
+                                    <p class="m-0 justify-content-between">
+                                        Credit Note
+                                    </p>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <label for="" class="mr-2">Status</label>
+                                    <select name="" id="" class="accrdSelect text-primary">
+                                        <option value="">All</option>
+                                    </select>
+                                    <a href="" class="btn text-primary">+ Add New</a>
+
+                                </div>
+                            </div>
+                            <div class="collapse multi-collapse clpsMenu" id="crdtNtAccord">
+                                <div class="famnCntnr">
+                                    <div class="tblWrpr">
+                                        <table class="table vwTable">
+                                            <thead>
+                                                <tr>
+                                                    <th>Credit Date</th>
+                                                    <th>Credit Note#</th>
+                                                    <th>Reference#</th>
+                                                    <th class="text-right">Balance</th>
+                                                    <th class="text-right">Amount</th>
+                                                    <th>Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>02/02/2021</td>
+                                                    <td>0001</td>
+                                                    <td>35943</td>
+                                                    <td class="text-right">₹703.365812</td>
+                                                    <td class="text-right">₹546.0124215</td>
+                                                    <td>Draft</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-purchases" role="tabpanel"
+                        aria-labelledby="pills-purchases-tab">
+                        <div class="row">
+                            <div class="inptWrpr col-4">
+                                <select name="" id="">
+                                    <option value="">Go to transactions</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="salesTabWrapper">
+                            <div class="btn acrdBtn collapsed" type="button" data-toggle="collapse"
+                                data-target="#prbillAccords" aria-expanded="false" aria-controls="prbillAccords">
+                                <div class="d-flex align-items-center">
+                                    <span class="material-icons">chevron_right</span>
+                                    <p class="m-0 justify-content-between">
+                                        Bill
+                                    </p>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <label for="" class="mr-2">Status</label>
+                                    <select name="" id="" class="accrdSelect text-primary">
+                                        <option value="">All</option>
+                                    </select>
+                                    <a href="" class="btn text-primary">+ Add New</a>
+
+                                </div>
+                            </div>
+                            <div class="collapse multi-collapse clpsMenu" id="prbillAccords">
+                                <div class="famnCntnr">
+                                    <div class="tblWrpr">
+                                        <table class="table vwTable">
+                                            <thead>
+                                                <tr>
+                                                    <th>Date</th>
+                                                    <th>Bill#</th>
+                                                    <th>Reference#</th>
+                                                    <th>Vendor Name</th>
+                                                    <th class="text-right">Amount</th>
+                                                    <th class="text-right">Balance Due</th>
+                                                    <th>Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>02/02/2021</td>
+                                                    <td>Bill-0</td>
+                                                    <td>35943</td>
+                                                    <td>Registered Vendor</td>
+                                                    <td>₹703.365812</td>
+                                                    <td>₹546.0124215</td>
+                                                    <td>Draft</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>02/02/2021</td>
+                                                    <td>Bill-0</td>
+                                                    <td>35943</td>
+                                                    <td>Registered Vendor</td>
+                                                    <td>₹703.365812</td>
+                                                    <td>₹546.0124215</td>
+                                                    <td>Draft</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>02/02/2021</td>
+                                                    <td>Bill-0</td>
+                                                    <td>35943</td>
+                                                    <td>Registered Vendor</td>
+                                                    <td>₹703.365812</td>
+                                                    <td>₹546.0124215</td>
+                                                    <td>Draft</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="btn acrdBtn collapsed" type="button" data-toggle="collapse"
+                                data-target="#prBillPayAccord" aria-expanded="false" aria-controls="prBillPayAccord">
+                                <div class="d-flex align-items-center">
+                                    <span class="material-icons">chevron_right</span>
+                                    <p class="m-0 justify-content-between">
+                                        Bill Payment
+                                    </p>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <label for="" class="mr-2">Status</label>
+                                    <select name="" id="" class="accrdSelect text-primary">
+                                        <option value="">All</option>
+                                    </select>
+                                    <a href="" class="btn text-primary">+ Add New</a>
+
+                                </div>
+                            </div>
+                            <div class="collapse multi-collapse clpsMenu" id="prBillPayAccord">
+                                <div class="famnCntnr">
+                                    <div class="tblWrpr">
+                                        <table class="table vwTable">
+                                            <thead>
+                                                <tr>
+                                                    <th>date</th>
+                                                    <th>invoice#</th>
+                                                    <th>reference#</th>
+                                                    <th>Payment Mode</th>
+                                                    <th class="text-right">Amount Paid</th>
+                                                    <th class="text-right">Unused Amount</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>12/12/2020</td>
+                                                    <td>12345678</td>
+                                                    <td>12345678</td>
+                                                    <td>Stripe</td>
+                                                    <td class="text-right">₹120</td>
+                                                    <td class="text-right">₹120</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="btn acrdBtn collapsed" type="button" data-toggle="collapse"
+                                data-target="#prExpenseAccord" aria-expanded="false" aria-controls="prExpenseAccord">
+                                <div class="d-flex align-items-center">
+                                    <span class="material-icons">chevron_right</span>
+                                    <p class="m-0 justify-content-between">
+                                        Expenses
+                                    </p>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <label for="" class="mr-2">Status</label>
+                                    <select name="" id="" class="accrdSelect text-primary">
+                                        <option value="">All</option>
+                                    </select>
+                                    <a href="" class="btn text-primary">+ Add New</a>
+
+                                </div>
+                            </div>
+                            <div class="collapse multi-collapse clpsMenu" id="prExpenseAccord">
+                                <div class="famnCntnr">
+                                    <div class="tblWrpr">
+                                        <table class="table vwTable">
+                                            <thead>
+                                                <tr>
+                                                    <th>date</th>
+                                                    <th>expense account</th>
+                                                    <th>Reference#</th>
+                                                    <th>Vendor Name</th>
+                                                    <th>Paid Through</th>
+                                                    <th>Customer Name</th>
+                                                    <th class="text-right">Amount</th>
+                                                    <th>Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>12/12/2020</td>
+                                                    <td>12345678</td>
+                                                    <td>12345678</td>
+                                                    <td>Vendor_one</td>
+                                                    <td>Stripe</td>
+                                                    <td>Sample_customer</td>
+                                                    <td class="text-right">₹120</td>
+                                                    <td>Paid</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="btn acrdBtn collapsed" type="button" data-toggle="collapse"
+                                data-target="#prRcrngBills" aria-expanded="false" aria-controls="prRcrngBills">
+                                <div class="d-flex align-items-center">
+                                    <span class="material-icons">chevron_right</span>
+                                    <p class="m-0 justify-content-between">
+                                        Recurring Bills
+                                    </p>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <label for="" class="mr-2">Status</label>
+                                    <select name="" id="" class="accrdSelect text-primary">
+                                        <option value="">All</option>
+                                    </select>
+                                    <a href="" class="btn text-primary">+ Add New</a>
+
+                                </div>
+                            </div>
+                            <div class="collapse multi-collapse clpsMenu" id="prRcrngBills">
+                                <div class="famnCntnr">
+                                    <div class="tblWrpr">
+                                        <table class="table vwTable">
+                                            <thead>
+                                                <tr>
+                                                    <th>profile name</th>
+                                                    <th>frequency</th>
+                                                    <th>last bill date</th>
+                                                    <th>next bill date</th>
+                                                    <th>status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Profile_one</td>
+                                                    <td>02</td>
+                                                    <td>12/12/2020</td>
+                                                    <td>12/12/2020</td>
+                                                    <td>draft</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="btn acrdBtn collapsed" type="button" data-toggle="collapse"
+                                data-target="#prRcrExpnsAccord" aria-expanded="false" aria-controls="prRcrExpnsAccord">
+                                <div class="d-flex align-items-center">
+                                    <span class="material-icons">chevron_right</span>
+                                    <p class="m-0 justify-content-between">
+                                        Recurring Expenses
+                                    </p>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <label for="" class="mr-2">Status</label>
+                                    <select name="" id="" class="accrdSelect text-primary">
+                                        <option value="">All</option>
+                                    </select>
+                                    <a href="" class="btn text-primary">+ Add New</a>
+
+                                </div>
+                            </div>
+                            <div class="collapse multi-collapse clpsMenu" id="prRcrExpnsAccord">
+                                <div class="famnCntnr">
+                                    <div class="tblWrpr">
+                                        <table class="table vwTable">
+                                            <thead>
+                                                <tr>
+                                                    <th>profile name</th>
+                                                    <th>Expense Account</th>
+                                                    <th>frequency</th>
+                                                    <th>last expense date</th>
+                                                    <th>next expense date</th>
+                                                    <th>status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Profile_one</td>
+                                                    <td>123456789</td>
+                                                    <td>02</td>
+                                                    <td>12/12/2020</td>
+                                                    <td>12/12/2020</td>
+                                                    <td>draft</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="btn acrdBtn collapsed" type="button" data-toggle="collapse"
+                                data-target="#prPrchOrdrAccord" aria-expanded="false" aria-controls="prPrchOrdrAccord">
+                                <div class="d-flex align-items-center">
+                                    <span class="material-icons">chevron_right</span>
+                                    <p class="m-0 justify-content-between">
+                                        Purchase Order
+                                    </p>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <label for="" class="mr-2">Status</label>
+                                    <select name="" id="" class="accrdSelect text-primary">
+                                        <option value="">All</option>
+                                    </select>
+                                    <a href="" class="btn text-primary">+ Add New</a>
+
+                                </div>
+                            </div>
+                            <div class="collapse multi-collapse clpsMenu" id="prPrchOrdrAccord">
+                                <div class="famnCntnr">
+                                    <div class="tblWrpr">
+                                        <table class="table vwTable">
+                                            <thead>
+                                                <tr>
+                                                    <th>Purchase order#</th>
+                                                    <th>Reference#</th>
+                                                    <th>date</th>
+                                                    <th>delivery date</th>
+                                                    <th class="text-right">amount</th>
+                                                    <th>status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1234567</td>
+                                                    <td>123456789</td>
+                                                    <td>12/12/2020</td>
+                                                    <td>12/12/2020</td>
+                                                    <td class="text-right">₹122</td>
+                                                    <td>Draft</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="btn acrdBtn collapsed" type="button" data-toggle="collapse"
+                                data-target="#prVendorCredits" aria-expanded="false" aria-controls="prVendorCredits">
+                                <div class="d-flex align-items-center">
+                                    <span class="material-icons">chevron_right</span>
+                                    <p class="m-0 justify-content-between">
+                                        Vendor Credits
+                                    </p>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <label for="" class="mr-2">Status</label>
+                                    <select name="" id="" class="accrdSelect text-primary">
+                                        <option value="">All</option>
+                                    </select>
+                                    <a href="" class="btn text-primary">+ Add New</a>
+
+                                </div>
+                            </div>
+                            <div class="collapse multi-collapse clpsMenu" id="prVendorCredits">
+                                <div class="famnCntnr">
+                                    <div class="tblWrpr">
+                                        <table class="table vwTable">
+                                            <thead>
+                                                <tr>
+                                                    <th>Date</th>
+                                                    <th>Credit Note#</th>
+                                                    <th>Reference#</th>
+                                                    <th class="text-right">Balance</th>
+                                                    <th class="text-right">amount</th>
+                                                    <th>status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1234567</td>
+                                                    <td>12/12/2020</td>
+                                                    <td>123456789</td>
+                                                    <td class="text-right">₹122</td>
+                                                    <td class="text-right">₹122</td>
+                                                    <td>Draft</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="btn acrdBtn collapsed" type="button" data-toggle="collapse"
+                                data-target="#prJrnlAccord" aria-expanded="false" aria-controls="prJrnlAccord">
+                                <div class="d-flex align-items-center">
+                                    <span class="material-icons">chevron_right</span>
+                                    <p class="m-0 justify-content-between">
+                                        Journals
+                                    </p>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <label for="" class="mr-2">Status</label>
+                                    <select name="" id="" class="accrdSelect text-primary">
+                                        <option value="">All</option>
+                                    </select>
+                                    <a href="" class="btn text-primary">+ Add New</a>
+
+                                </div>
+                            </div>
+                            <div class="collapse multi-collapse clpsMenu" id="prJrnlAccord">
+                                <div class="famnCntnr">
+                                    <div class="tblWrpr">
+                                        <table class="table vwTable">
+                                            <thead>
+                                                <tr>
+                                                    <th>Date</th>
+                                                    <th>Journal#</th>
+                                                    <th>Reference#</th>
+                                                    <th class="text-right">Debit</th>
+                                                    <th class="text-right">Credit</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>12/12/2020</td>
+                                                    <td>1</td>
+                                                    <td>123456789</td>
+                                                    <td class="text-right">₹122</td>
+                                                    <td class="text-right">₹122</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-relatedList" role="tabpanel"
+                        aria-labelledby="pills-relatedList-tab">
+                        ...</div>
+                    <div class="tab-pane fade" id="pills-mails" role="tabpanel" aria-labelledby="pills-mails-tab">
+                        <div class="d-flex justify-content-between">
+                            <div class="inptWrpr">
+                                <select name="" id="">
+                                    <option value="">System Mails</option>
+                                </select>
+                            </div>
+                            <div class="inptWrpr dropdown">
+                                <a class="btn dropdown-toggle text-primary" href="#" role="button" id="dropdownMenuLink"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Connect your mail account
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item" href="#">Gmail</a>
+                                    <a class="dropdown-item" href="#">Outlook</a>
+                                    <a class="dropdown-item" href="#">Zoho mail</a>
+                                    <a class="dropdown-item" href="#">Link with work account</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mailWrapper">
+                            <div class="mlCntnr d-flex align-items-start">
+                                <div class="ml-icon"><span class="material-icons mr-2">mail</span></div>
+                                <div class="w-100">
+                                    <p class="mlName m-0 mb-1 d-flex align-items-center">
+                                        sample@gmail.com</p>
+                                    <div class="infoWrpr d-flex align-items-center justify-content-between">
+                                        <p class="m-0">Zylker, Discussion for digital transformation <span>- Hi Zylker,
+                                                I am
+                                                Brenda
+                                                with
+                                                Muoro. We a...</span> </p>
+                                        <div class="rtWrpr d-flex align-items-center">
+                                            <p class="m-0 mlSize">5 KB</p>
+                                            <p class="m-0 mlDate">THU MAR 7</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mlCntnr d-flex align-items-start">
+                                <div class="ml-icon"><span class="material-icons mr-2">mail</span></div>
+                                <div class="w-100">
+                                    <p class="mlName m-0 mb-1 d-flex align-items-center">
+                                        sample@gmail.com</p>
+                                    <div class="infoWrpr d-flex align-items-center justify-content-between">
+                                        <p class="m-0">Zylker, Discussion for digital transformation <span>- Hi Zylker,
+                                                I am
+                                                Brenda
+                                                with
+                                                Muoro. We a...</span> </p>
+                                        <div class="rtWrpr d-flex align-items-center">
+                                            <p class="m-0 mlSize">5 KB</p>
+                                            <p class="m-0 mlDate">THU MAR 7</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mlCntnr d-flex align-items-start">
+                                <div class="ml-icon"><span class="material-icons mr-2">mail</span></div>
+                                <div class="w-100">
+                                    <p class="mlName m-0 mb-1 d-flex align-items-center">
+                                        sample@gmail.com</p>
+                                    <div class="infoWrpr d-flex align-items-center justify-content-between">
+                                        <p class="m-0">Zylker, Discussion for digital transformation <span>- Hi Zylker,
+                                                I am
+                                                Brenda
+                                                with
+                                                Muoro. We a...</span> </p>
+                                        <div class="rtWrpr d-flex align-items-center">
+                                            <p class="m-0 mlSize">5 KB</p>
+                                            <p class="m-0 mlDate">THU MAR 7</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-statement" role="tabpanel"
+                        aria-labelledby="pills-statement-tab">
+                        <div class="d-flex justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <div class="inptWrpr prdSlctWrpr mr-3">
+                                    <span class="material-icons prefix">date_range</span>
+                                    <select class="pl-4" name="" id="">
+                                        <option value="">This Year</option>
+                                    </select>
+                                </div>
+                                <div class="inptWrpr prdSlctWrpr">
+                                    <span class="prefix">view</span>
+                                    <select class="pl-5" name="" id="">
+                                        <option value="">Vendor Statement</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="vndrBtnStck d-flex align-items-center">
+                                <button class="btn icnBtn material-icons mr-1">print</button>
+                                <button class="btn icnBtn material-icons mr-1">picture_as_pdf</button>
+                                <button class="btn icnBtn mr-1 xlsButton"><img src="./assets/xls.svg"></button>
+                                <button class="btn primButton bluBtn">Send Email</button>
+                            </div>
+                        </div>
+                        <div class="famnCntnr px-0">
+                            <div class="tblWrpr">
+                                <table class="table vwTable">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Transaction Id</th>
+                                            <th class="text-right">Debit</th>
+                                            <th class="text-right">Credit</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>12/12/2020</td>
+                                            <td>123456789</td>
+                                            <td class="text-right">-</td>
+                                            <td class="text-right">₹122</td>
+                                        </tr>
+                                        <tr>
+                                            <td>12/12/2020</td>
+                                            <td>123456789</td>
+                                            <td class="text-right">₹122</td>
+                                            <td class="text-right">-</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+<script>
+    am4core.ready(function () {
+
+        // Themes begin
+        am4core.useTheme(am4themes_animated);
+        // Themes end
+
+
+
+        var chart = am4core.create('chartdiv', am4charts.XYChart)
+        chart.colors.step = 2;
+
+        chart.legend = new am4charts.Legend()
+        chart.legend.position = 'top'
+        chart.legend.paddingBottom = 20
+        chart.legend.labels.template.maxWidth = 95
+
+        var xAxis = chart.xAxes.push(new am4charts.CategoryAxis())
+        xAxis.dataFields.category = 'category'
+        xAxis.renderer.cellStartLocation = 0.1
+        xAxis.renderer.cellEndLocation = 0.9
+        xAxis.renderer.grid.template.location = 0;
+
+        var yAxis = chart.yAxes.push(new am4charts.ValueAxis());
+        yAxis.min = 0;
+
+        function createSeries(value, name) {
+            var series = chart.series.push(new am4charts.ColumnSeries())
+            series.dataFields.valueY = value
+            series.dataFields.categoryX = 'category'
+            series.name = name
+
+            series.events.on("hidden", arrangeColumns);
+            series.events.on("shown", arrangeColumns);
+
+            var bullet = series.bullets.push(new am4charts.LabelBullet())
+            bullet.interactionsEnabled = false
+            bullet.dy = 30;
+            bullet.label.text = '{valueY}'
+            bullet.label.fill = am4core.color('#ffffff')
+
+            return series;
+        }
+
+        chart.data = [
+            {
+                category: 'Place #1',
+                first: 40,
+                second: 55,
+                third: 60
+            },
+            {
+                category: 'Place #2',
+                first: 30,
+                second: 78,
+                third: 69
+            },
+            {
+                category: 'Place #3',
+                first: 27,
+                second: 40,
+                third: 45
+            },
+            {
+                category: 'Place #4',
+                first: 50,
+                second: 33,
+                third: 22
+            }
+        ]
+
+
+        createSeries('first', 'Expense1');
+        createSeries('second', 'Expense2');
+        createSeries('third', 'Expense3');
+
+        function arrangeColumns() {
+
+            var series = chart.series.getIndex(0);
+
+            var w = 1 - xAxis.renderer.cellStartLocation - (1 - xAxis.renderer.cellEndLocation);
+            if (series.dataItems.length > 1) {
+                var x0 = xAxis.getX(series.dataItems.getIndex(0), "categoryX");
+                var x1 = xAxis.getX(series.dataItems.getIndex(1), "categoryX");
+                var delta = ((x1 - x0) / chart.series.length) * w;
+                if (am4core.isNumber(delta)) {
+                    var middle = chart.series.length / 2;
+
+                    var newIndex = 0;
+                    chart.series.each(function (series) {
+                        if (!series.isHidden && !series.isHiding) {
+                            series.dummyData = newIndex;
+                            newIndex++;
+                        }
+                        else {
+                            series.dummyData = chart.series.indexOf(series);
+                        }
+                    })
+                    var visibleCount = newIndex;
+                    var newMiddle = visibleCount / 2;
+
+                    chart.series.each(function (series) {
+                        var trueIndex = chart.series.indexOf(series);
+                        var newIndex = series.dummyData;
+
+                        var dx = (newIndex - trueIndex + middle - newMiddle) * delta
+
+                        series.animate({ property: "dx", to: dx }, series.interpolationDuration, series.interpolationEasing);
+                        series.bulletsContainer.animate({ property: "dx", to: dx }, series.interpolationDuration, series.interpolationEasing);
+                    })
+                }
+            }
+        }
+
+    }); // end am4core.ready()
+</script>
+<script src="./js/fa.js"></script>
+
+</html>

@@ -1,0 +1,26 @@
+<div class="lftLgnContainer"></div>
+<div class="rtLgnContainer">
+  <div class="lgnFrmContainer text-center">
+    <img src="/assets/logo.svg" class="mb-4"/>
+    <h2 class="mb-5"><b>Login</b></h2>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {"data-parsley-validate" => true, class: ""}) do |f| %>
+      <div class="inptWrpr">
+        <label for="">User name</label>
+        <%= f.text_field :login, autofocus: true, placeholder: "Username", "data-parsley-required" => "true", "data-parsley-required-message" => "Please enter username." %>
+      </div>
+      <div class="inptWrpr">
+        <label for="">Password</label>
+        <%= f.password_field :password, placeholder: "Enter Password", "data-parsley-required" => "true", "data-parsley-required-message" => "Please enter password." %>
+      </div>
+      <div class="mb-4 d-flex align-items-center justify-content-between">
+        <div class="">
+          <%= f.check_box :remember_me %>
+          <label for="user_remember_me">Remember me</label>
+        </div>
+        <a href="">Forgot Password?</a>
+      </div>
+      <%= f.submit "Login", class: 'btn primButton mx-auto w-100 form-submit' %>
+      <p class="mt-3">Don't have an account? <a>Contact Us</a></p>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GwayERP-F&A</title>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Boostrap css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- google-material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- css stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- font css -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body>
+    <div class="fadashBoard d-flex align-items-start">
+        <div class="mainLftNavbar d-flex flex-column" id="sdBrToggle">
+            <div class="lgContainer">
+                <img id="mainLogo" src="./assets/FandAlogo.png" alt="">
+                <div id="hamMenuIcon" class="material-icons mnuTglIcon d-none" onclick="sideBarToggle()">menu</div>
+            </div>
+            <div class="prflContents">
+                <img class="prflImg" src="./assets/no_profile.png" alt="">
+                <h2 class="usrNme">Bruce Wayne</h2>
+                <a href="" class="usrEmlId">bruce_wayne@gwayerp.com</a>
+            </div>
+            <div class="navTabsWrapper">
+                <a class="btn lftNvBtn active" type="button">
+                    <img class="navIcons" src="./assets/dashboard.svg" alt="">
+                    Dashboard
+                </a>
+                <a class="btn lftNvBtn" type="button">
+                    <img class="navIcons" src="./assets/items.svg" alt="">
+                    Items
+                    <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                </a>
+                <a class="btn lftNvBtn acrdBtn collapsed" type="button" data-toggle="collapse"
+                    data-target="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1">
+                    <p class="m-0">
+                        <img class="navIcons" src="./assets/bank.svg" alt="">
+                        Banking
+                    </p>
+                    <span class="material-icons">expand_more</span>
+                </a>
+                <div class="collapse multi-collapse clpsMenu" id="multiCollapseExample1">
+                    <button class="btn inrLftBtn lftNvBtn active" type="button">
+                        Estimates
+                    </button>
+                    <button class="btn inrLftBtn lftNvBtn" type="button">
+                        Orders
+                    </button>
+                </div>
+                <a class="btn lftNvBtn acrdBtn collapsed" type="button" data-toggle="collapse"
+                    data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">
+                    <p class="m-0">
+                        <img class="navIcons" src="./assets/sales.svg" alt="">
+                        Sales
+                    </p>
+                    <span class="material-icons">expand_more</span>
+                </a>
+                <div class="collapse multi-collapse clpsMenu" id="multiCollapseExample2">
+                    <button class="btn inrLftBtn lftNvBtn active" type="button">
+                        Estimates
+                    </button>
+                    <button class="btn inrLftBtn lftNvBtn" type="button">
+                        Orders
+                    </button>
+                </div>
+                <a class="btn lftNvBtn acrdBtn collapsed" type="button" data-toggle="collapse"
+                    data-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">
+                    <p class="m-0">
+                        <img class="navIcons" src="./assets/purchase.svg" alt="">
+                        Purchase
+                    </p>
+                    <span class="material-icons">expand_more</span>
+                </a>
+                <div class="collapse multi-collapse clpsMenu" id="multiCollapseExample3">
+                    <button class="btn inrLftBtn lftNvBtn active" type="button">
+                        Estimates
+                    </button>
+                    <button class="btn inrLftBtn lftNvBtn" type="button">
+                        Orders
+                    </button>
+                </div>
+
+                <!-- vouchers tab -->
+
+                <a class="btn lftNvBtn acrdBtn collapsed" type="button" data-toggle="collapse"
+                    data-target="#multiCollapseExample6" aria-expanded="false" aria-controls="multiCollapseExample6">
+                    <p class="m-0">
+                        <img class="navIcons" src="./assets/vouchers.svg" alt="">
+                        Vouchers
+                    </p>
+                    <span class="material-icons">expand_more</span>
+                </a>
+                <div class="collapse multi-collapse clpsMenu" id="multiCollapseExample6">
+                    <a class="btn inrLftBtn lftNvBtn active" type="button">
+                        Purchase Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Sales Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Debit Note Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Credit Note Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Receipt Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Post Dated Receipt Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Payment Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Post Dated Payment Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Journal Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Contra Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Memorandum Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Reversing Journal Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+
+                </div>
+
+                <!-- voucher tab end -->
+
+                <a class="btn lftNvBtn acrdBtn collapsed" type="button" data-toggle="collapse"
+                    data-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4">
+                    <p class="m-0">
+                        <img class="navIcons" src="./assets/report.svg" alt="">
+                        Reports
+                    </p>
+                    <span class="material-icons">expand_more</span>
+                </a>
+                <div class="collapse multi-collapse clpsMenu" id="multiCollapseExample4">
+                    <button class="btn inrLftBtn lftNvBtn active" type="button">
+                        Estimates
+                    </button>
+                    <button class="btn inrLftBtn lftNvBtn" type="button">
+                        Orders
+                    </button>
+                </div>
+
+
+                <a class="btn lftNvBtn acrdBtn collapsed" type="button" data-toggle="collapse"
+                    data-target="#multiCollapseExample5" aria-expanded="false" aria-controls="multiCollapseExample5">
+                    <p class="m-0">
+                        <img class="navIcons" src="./assets/accountant.svg" alt="">
+                        Accountant
+                    </p>
+                    <span class="material-icons">expand_more</span>
+                </a>
+                <div class="collapse multi-collapse clpsMenu" id="multiCollapseExample5">
+                    <button class="btn inrLftBtn lftNvBtn active" type="button">
+                        Estimates
+                    </button>
+                    <button class="btn inrLftBtn lftNvBtn" type="button">
+                        Orders
+                    </button>
+                </div>
+            </div>
+            <div class="adtnNavBtns">
+                <a class="btn lftNvBtn adtnBtns">
+                    <img class="navIcons" src="./assets/settings.svg" alt="">
+                    Settings
+                </a>
+                <a class="btn lftNvBtn adtnBtns">
+                    <img class="navIcons" src="./assets/logout.svg" alt="">
+                    Logout
+                </a>
+                <button class="btn hdBtn p-0" onclick="sideBarToggle()"><img src="./assets/hideBtn.svg" alt=""></button>
+            </div>
+        </div>
+        <div class="faInrDshbord w-100">
+            <div class="tpNvBar">
+                <div class="infoIcons">
+                    <a href="" class="notiInfoIcons"><img src="./assets/notification.svg" alt="">
+                        <span class="ntiCntCrcl">02</span>
+                    </a>
+                    <a href="" class="notiInfoIcons"><img src="./assets/settings_white.svg" alt=""> </a>
+                    <a href="" class="notiInfoIcons"><img src="./assets/faq.svg" alt=""> </a>
+                </div>
+            </div>
+            <div class="nwPgHdr d-flex align-items-center justify-content-between">
+                <h3>New Item</h3>
+                <a href="" class="material-icons">clear</a>
+            </div>
+            <form action="">
+                <div class="famnCntnr">
+                    <div class="tpbdrBtn pt-3 mb-4">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="inptWrpr">
+                                    <label class="cstmLbl mxLbl">Type</label>
+                                    <input type="radio" name="itemType" id="goods" checked>
+                                    <label for="goods" class="cursor-pointer ml-2 mr-4">Goods</label>
+                                    <input type="radio" name="itemType" id="services">
+                                    <label for="services" class="cursor-pointer ml-2">Services</label>
+                                </div>
+                            </div>
+                            <div class=" col-12 mb-4">
+                                <div class="col-12 ml-0 px-0 d-flex py-2">
+                                    <div class="inptWrpr mb-0">
+                                        <label class="cstmLbl mxLbl">Name</label>
+                                    </div>
+                                    <div class="row w-100">
+                                        <div class="inptWrpr col-8 mb-0">
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 ml-0 px-0 d-flex py-2">
+                                    <div class="inptWrpr mb-0">
+                                        <label class="cstmLbl mxLbl d-flex align-items-center">SKU <a tabindex="0"
+                                                class="btn plnIcnBtn" role="button" data-toggle="popover"
+                                                data-trigger="hover" data-content="The Stock Keeping Unit of item">
+                                                <span class="material-icons">
+                                                    help_outline
+                                                </span></a></label>
+                                    </div>
+                                    <div class="row w-100">
+                                        <div class="inptWrpr col-8 mb-0">
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 ml-0 px-0 d-flex py-2">
+                                    <div class="inptWrpr mb-0">
+                                        <label class="cstmLbl mxLbl d-flex align-items-center">Unit <a tabindex="0"
+                                                class="btn plnIcnBtn" role="button" data-toggle="popover"
+                                                data-trigger="hover"
+                                                data-content="The item will be measured in terms of this unit (eg.: kg, dozen">
+                                                <span class="material-icons">
+                                                    help_outline
+                                                </span></a></label>
+                                    </div>
+                                    <div class="row w-100">
+                                        <div class="inptWrpr col-8 mb-0">
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 ml-0 px-0 d-flex py-2">
+                                    <div class="inptWrpr mb-0">
+                                        <label class="cstmLbl mxLbl">HSN Code</label>
+                                    </div>
+                                    <div class="row w-100">
+                                        <div class="inptWrpr col-8 mb-0">
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 ml-0 px-0 d-flex pt-2">
+                                    <div class="inptWrpr mb-0">
+                                        <label class="cstmLbl mxLbl">Tax Preference</label>
+                                        <input type="radio" name="taxPreference" id="taxable" checked>
+                                        <label for="taxable" class="cursor-pointer ml-2 mr-4">Taxable</label>
+                                        <input type="radio" name="taxPreference" id="non-taxable">
+                                        <label for="non-taxable" class="cursor-pointer ml-2">Non-Taxable</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row w-100">
+                        <div class="row col-6">
+                            <div class="col-12 hdrCheckBox">
+                                <div class="inptWrpr mb-3">
+                                    <input type="checkbox" name="salesInfo" id="salesInformation" checked>
+                                    <label for="salesInformation" class="cursor-pointer ml-2 mr-4">Sales
+                                        Information</label>
+                                </div>
+                            </div>
+                            <div class="col-12 d-flex">
+                                <div class="inptWrpr">
+                                    <label class="cstmLbl mxLbl">Selling Price*</label>
+                                </div>
+                                <div class="row w-100">
+                                    <div class="inptWrpr prefix col-12">
+                                        <span class="iconBox">INR</span>
+                                        <input type="text" name="" id="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 d-flex">
+                                <div class="inptWrpr">
+                                    <label class="cstmLbl mxLbl">Account*</label>
+                                </div>
+                                <div class="row w-100">
+                                    <div class="inptWrpr col-12">
+                                        <select name="" id="">
+                                            <option value="">Sales</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 d-flex align-items-start">
+                                <div class="inptWrpr">
+                                    <label class="cstmLbl mxLbl pt-2">Description</label>
+                                </div>
+                                <div class="row w-100">
+                                    <div class="inptWrpr col-12">
+                                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row col-6">
+                            <div class="col-12 hdrCheckBox">
+                                <div class="inptWrpr mb-3">
+                                    <input type="checkbox" name="salesInfo" id="purchaseInformation" checked>
+                                    <label for="purchaseInformation" class="cursor-pointer ml-2 mr-4">Purchase
+                                        Information</label>
+                                </div>
+                            </div>
+                            <div class="col-12 d-flex">
+                                <div class="inptWrpr">
+                                    <label class="cstmLbl mxLbl">Cost Price*</label>
+                                </div>
+                                <div class="row w-100">
+                                    <div class="inptWrpr prefix col-12">
+                                        <span class="iconBox">INR</span>
+                                        <input type="text" name="" id="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 d-flex">
+                                <div class="inptWrpr">
+                                    <label class="cstmLbl mxLbl">Account*</label>
+                                </div>
+                                <div class="row w-100">
+                                    <div class="inptWrpr col-12">
+                                        <select name="" id="">
+                                            <option value="">Sales</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 d-flex align-items-start">
+                                <div class="inptWrpr">
+                                    <label class="cstmLbl mxLbl pt-2">Description</label>
+                                </div>
+                                <div class="row w-100">
+                                    <div class="inptWrpr col-12">
+                                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row col-6">
+                            <div class="col-12">
+                                <hr />
+                            </div>
+                            <div class="col-12 mb-3">
+                                <h6 class="scHdr">Default Tax Rates</h6>
+                            </div>
+                            <div class="col-12 d-flex">
+                                <div class="inptWrpr">
+                                    <label class="cstmLbl mxLbl">Intra State Tax Rate</label>
+                                </div>
+                                <div class="row w-100">
+                                    <div class="inptWrpr col-12">
+                                        <select name="" id="">
+                                            <option value="">GST5[5%]</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 d-flex">
+                                <div class="inptWrpr">
+                                    <label class="cstmLbl mxLbl">Inter State Tax Rate</label>
+                                </div>
+                                <div class="row w-100">
+                                    <div class="inptWrpr col-12">
+                                        <select name="" id="">
+                                            <option value="">GST5[5%]</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <hr />
+                        </div>
+                        <div class="col-12 hdrCheckBox">
+                            <div class="inptWrpr mb-3 align-items-start">
+                                <div class="pt-1">
+                                    <input type="checkbox" name="salesInfo" id="trackInventory" checked>
+                                </div>
+                                <label for="trackInventory" class="cursor-pointer ml-2 mr-4 pt-0">Track inventory for
+                                    this
+                                    item<br> <small>You cannot enable/disable inventory tracking once you've created
+                                        transactions for this item</small></label>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex">
+                            <div class="inptWrpr">
+                                <label class="cstmLbl mxLbl">Inventory Account</label>
+                            </div>
+                            <div class="row w-100">
+                                <div class="inptWrpr col-8">
+                                    <select name="" id="">
+                                        <option value="">GST5[5%]</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row w-100">
+                        <div class="row col-6">
+                            <div class="col-12 d-flex">
+                                <div class="inptWrpr">
+                                    <label class="cstmLbl mxLbl">Opening stock</label>
+                                </div>
+                                <div class="row w-100">
+                                    <div class="inptWrpr col-12">
+                                        <input type="text" name="" id="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row col-6">
+                            <div class="col-12 d-flex">
+                                <div class="inptWrpr">
+                                    <label class="cstmLbl mxLbl">Opening stock rate per unit</label>
+                                </div>
+                                <div class="row w-100">
+                                    <div class="inptWrpr col-12">
+                                        <input type="text" name="" id="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row ftrBtnStk mt-5 text-right justify-content-end pb-4">
+                        <button class="btn secButton mr-2">CANCEL</button>
+                        <button class="btn primButton">SAVE</button>
+                    </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+<script src="./js/fa.js"></script>
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="popover"]').popover();
+    });
+</script>
+
+</html>

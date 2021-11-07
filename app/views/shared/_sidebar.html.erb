@@ -1,0 +1,43 @@
+<div class="mainLftNavbar d-flex flex-column" id="sdBrToggle">
+  <div class="lgContainer">
+    <img id="mainLogo" src="/assets/logo.svg" alt="">
+    <div id="hamMenuIcon" class="material-icons mnuTglIcon d-none" onclick="sideBarToggle()">menu</div>
+  </div>
+  <div class="prflContents">
+    <img class="prflImg" src="/assets/no_profile.png" alt="">
+    <h2 class="usrNme"><%= @user.name %></h2>
+    <a href="" class="usrEmlId"><%= @user.email %></a>
+  </div>
+  <div class="navTabsWrapper">
+    <a class="btn lftNvBtn active" type="button" href="/">
+      <img class="navIcons" src="/assets/dashboard.svg" alt="">
+      Dashboard
+    </a>
+
+    <a class="btn lftNvBtn acrdBtn <%= purchase_opend(controller_name) ? '' : 'collapsed' %>" type="button" data-toggle="collapse" data-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">
+      <p class="m-0">
+        <img class="navIcons" src="/assets/purchase.svg" alt="">
+        Purchase
+      </p>
+      <span class="material-icons">expand_more</span>
+    </a>
+    <div class="collapse multi-collapse clpsMenu <%= purchase_opend(controller_name) ? 'show' : '' %>" id="multiCollapseExample3">
+      <a href="<%= vendors_path %>" class="btn inrLftBtn lftNvBtn <%= controller_name.eql?('vendors') ? 'active' : '' %>" type="button">
+        Vendors
+      </a>
+    </div>
+  </div>
+  <div class="adtnNavBtns">
+    <a class="btn lftNvBtn adtnBtns">
+      <img class="navIcons" src="/assets/settings.svg" alt="">
+      Settings
+    </a>
+    <a class="btn lftNvBtn adtnBtns" data-method="delete" href="<%= destroy_user_session_path %>">
+      <img class="navIcons" src="/assets/logout.svg" alt="">
+      Logout
+    </a>
+    <button class="btn hdBtn p-0" onclick="sideBarToggle()">
+      <img src="/assets/hideBtn.svg" alt="">
+    </button>
+  </div>
+</div>

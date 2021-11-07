@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GwayERP-F&A</title>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Boostrap css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- google-material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- css stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- font css -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="fadashBoard d-flex align-items-start">
+        <div class="mainLftNavbar d-flex flex-column" id="sdBrToggle">
+            <div class="lgContainer">
+                <img id="mainLogo" src="./assets/FandAlogo.png" alt="">
+                <div id="hamMenuIcon" class="material-icons mnuTglIcon d-none" onclick="sideBarToggle()">menu</div>
+            </div>
+            <div class="prflContents">
+                <img class="prflImg" src="./assets/no_profile.png" alt="">
+                <h2 class="usrNme">Bruce Wayne</h2>
+                <a href="" class="usrEmlId">bruce_wayne@gwayerp.com</a>
+            </div>
+            <div class="navTabsWrapper">
+                <a class="btn lftNvBtn active" type="button">
+                    <img class="navIcons" src="./assets/dashboard.svg" alt="">
+                    Dashboard
+                </a>
+                <a class="btn lftNvBtn" type="button">
+                    <img class="navIcons" src="./assets/items.svg" alt="">
+                    Items
+                    <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                </a>
+                <a class="btn lftNvBtn acrdBtn collapsed" type="button" data-toggle="collapse"
+                    data-target="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1">
+                    <p class="m-0">
+                        <img class="navIcons" src="./assets/bank.svg" alt="">
+                        Banking
+                    </p>
+                    <span class="material-icons">expand_more</span>
+                </a>
+                <div class="collapse multi-collapse clpsMenu" id="multiCollapseExample1">
+                    <button class="btn inrLftBtn lftNvBtn active" type="button">
+                        Estimates
+                    </button>
+                    <button class="btn inrLftBtn lftNvBtn" type="button">
+                        Orders
+                    </button>
+                </div>
+                <a class="btn lftNvBtn acrdBtn collapsed" type="button" data-toggle="collapse"
+                    data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">
+                    <p class="m-0">
+                        <img class="navIcons" src="./assets/sales.svg" alt="">
+                        Sales
+                    </p>
+                    <span class="material-icons">expand_more</span>
+                </a>
+                <div class="collapse multi-collapse clpsMenu" id="multiCollapseExample2">
+                    <button class="btn inrLftBtn lftNvBtn active" type="button">
+                        Estimates
+                    </button>
+                    <button class="btn inrLftBtn lftNvBtn" type="button">
+                        Orders
+                    </button>
+                </div>
+                <a class="btn lftNvBtn acrdBtn collapsed" type="button" data-toggle="collapse"
+                    data-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">
+                    <p class="m-0">
+                        <img class="navIcons" src="./assets/purchase.svg" alt="">
+                        Purchase
+                    </p>
+                    <span class="material-icons">expand_more</span>
+                </a>
+                <div class="collapse multi-collapse clpsMenu" id="multiCollapseExample3">
+                    <button class="btn inrLftBtn lftNvBtn active" type="button">
+                        Estimates
+                    </button>
+                    <button class="btn inrLftBtn lftNvBtn" type="button">
+                        Orders
+                    </button>
+                </div>
+
+                <!-- vouchers tab -->
+
+                <a class="btn lftNvBtn acrdBtn collapsed" type="button" data-toggle="collapse"
+                    data-target="#multiCollapseExample6" aria-expanded="false" aria-controls="multiCollapseExample6">
+                    <p class="m-0">
+                        <img class="navIcons" src="./assets/vouchers.svg" alt="">
+                        Vouchers
+                    </p>
+                    <span class="material-icons">expand_more</span>
+                </a>
+                <div class="collapse multi-collapse clpsMenu" id="multiCollapseExample6">
+                    <a class="btn inrLftBtn lftNvBtn active" type="button">
+                        Purchase Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Sales Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Debit Note Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Credit Note Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Receipt Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Post Dated Receipt Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Payment Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Post Dated Payment Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Journal Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Contra Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Memorandum Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Reversing Journal Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+
+                </div>
+
+                <!-- voucher tab end -->
+
+                <a class="btn lftNvBtn acrdBtn collapsed" type="button" data-toggle="collapse"
+                    data-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4">
+                    <p class="m-0">
+                        <img class="navIcons" src="./assets/report.svg" alt="">
+                        Reports
+                    </p>
+                    <span class="material-icons">expand_more</span>
+                </a>
+                <div class="collapse multi-collapse clpsMenu" id="multiCollapseExample4">
+                    <button class="btn inrLftBtn lftNvBtn active" type="button">
+                        Estimates
+                    </button>
+                    <button class="btn inrLftBtn lftNvBtn" type="button">
+                        Orders
+                    </button>
+                </div>
+
+
+                <a class="btn lftNvBtn acrdBtn collapsed" type="button" data-toggle="collapse"
+                    data-target="#multiCollapseExample5" aria-expanded="false" aria-controls="multiCollapseExample5">
+                    <p class="m-0">
+                        <img class="navIcons" src="./assets/accountant.svg" alt="">
+                        Accountant
+                    </p>
+                    <span class="material-icons">expand_more</span>
+                </a>
+                <div class="collapse multi-collapse clpsMenu" id="multiCollapseExample5">
+                    <button class="btn inrLftBtn lftNvBtn active" type="button">
+                        Estimates
+                    </button>
+                    <button class="btn inrLftBtn lftNvBtn" type="button">
+                        Orders
+                    </button>
+                </div>
+            </div>
+            <div class="adtnNavBtns">
+                <a class="btn lftNvBtn adtnBtns">
+                    <img class="navIcons" src="./assets/settings.svg" alt="">
+                    Settings
+                </a>
+                <a class="btn lftNvBtn adtnBtns">
+                    <img class="navIcons" src="./assets/logout.svg" alt="">
+                    Logout
+                </a>
+                <button class="btn hdBtn p-0" onclick="sideBarToggle()"><img src="./assets/hideBtn.svg" alt=""></button>
+            </div>
+        </div>
+        <div class="faInrDshbord w-100">
+            <div class="tpNvBar">
+                <div class="infoIcons">
+                    <a href="" class="notiInfoIcons"><img src="./assets/notification.svg" alt="">
+                        <span class="ntiCntCrcl">02</span>
+                    </a>
+                    <a href="" class="notiInfoIcons"><img src="./assets/settings_white.svg" alt=""> </a>
+                    <a href="" class="notiInfoIcons"><img src="./assets/faq.svg" alt=""> </a>
+                </div>
+            </div>
+            <div class="nwPgHdr brdrNone bg-white d-flex align-items-center justify-content-between">
+                <h3 class="wtMdum pt-2 pb-0">
+                    Adjustment Details
+                </h3>
+                <div class="btnStk d-flex align-items-center">
+                    <a href="" class="btn icnBtn ml-2">Edit</a>
+                    <select class="icnBtn ml-2 pl-2 pr-2" name="" id="">
+                        <option value="">more</option>
+                    </select>
+                </div>
+            </div>
+            <div class="w-100">
+                <hr class="mt-1" />
+            </div>
+            <div class="famnCntnr pt-1">
+                <table class="table ovrVwTbl">
+                    <tr>
+                        <td>Date</td>
+                        <td>18 Sep 2020</td>
+                    </tr>
+                    <tr>
+                        <td>Reason</td>
+                        <td>Stock on fire</td>
+                    </tr>
+                    <tr>
+                        <td>Status</td>
+                        <td>ADJUSTED</td>
+                    </tr>
+                    <tr>
+                        <td>Account</td>
+                        <td>quidem</td>
+                    </tr>
+                    <tr>
+                        <td>Adjustment Type</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Reference Number</td>
+                        <td>ADJ-0</td>
+                    </tr>
+                    <tr>
+                        <td>Adjusted By</td>
+                        <td>demouser</td>
+                    </tr>
+                    <tr>
+                        <td>Description</td>
+                        <td>Suscipit eum repellendus nihil nulla consequatur ut sint amet.</td>
+                    </tr>
+                </table>
+                <hr />
+                <h6 class="mt-5 mb-4">Adjusted Items</h6>
+                <table class="table w-75">
+                    <thead>
+                        <tr>
+                            <th>Item Details</th>
+                            <th class="text-right">Quantity Adjusted</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Item 6 <br /> SKU:SKU 6 <br />
+                                <p style="opacity: 0.6;">(Item 6 - Sales
+                                    Description)</p>
+                            </td>
+                            <td class="text-right">119.00 (Pcs)</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Item 6 <br /> SKU:SKU 6 <br />
+                                <p style="opacity: 0.6;">(Item 6 - Sales
+                                    Description)</p>
+                            </td>
+                            <td class="text-right">119.00 (Pcs)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+<script>
+    am4core.ready(function () {
+
+        // Themes begin
+        am4core.useTheme(am4themes_animated);
+        // Themes end
+
+
+
+        var chart = am4core.create('chartdiv', am4charts.XYChart)
+        chart.colors.step = 2;
+
+        chart.legend = new am4charts.Legend()
+        chart.legend.position = 'top'
+        chart.legend.paddingBottom = 20
+        chart.legend.labels.template.maxWidth = 95
+
+        var xAxis = chart.xAxes.push(new am4charts.CategoryAxis())
+        xAxis.dataFields.category = 'category'
+        xAxis.renderer.cellStartLocation = 0.1
+        xAxis.renderer.cellEndLocation = 0.9
+        xAxis.renderer.grid.template.location = 0;
+
+        var yAxis = chart.yAxes.push(new am4charts.ValueAxis());
+        yAxis.min = 0;
+
+        function createSeries(value, name) {
+            var series = chart.series.push(new am4charts.ColumnSeries())
+            series.dataFields.valueY = value
+            series.dataFields.categoryX = 'category'
+            series.name = name
+
+            series.events.on("hidden", arrangeColumns);
+            series.events.on("shown", arrangeColumns);
+
+            var bullet = series.bullets.push(new am4charts.LabelBullet())
+            bullet.interactionsEnabled = false
+            bullet.dy = 30;
+            bullet.label.text = '{valueY}'
+            bullet.label.fill = am4core.color('#ffffff')
+
+            return series;
+        }
+
+        chart.data = [
+            {
+                category: 'Place #1',
+                first: 40,
+                second: 55,
+                third: 60
+            },
+            {
+                category: 'Place #2',
+                first: 30,
+                second: 78,
+                third: 69
+            },
+            {
+                category: 'Place #3',
+                first: 27,
+                second: 40,
+                third: 45
+            },
+            {
+                category: 'Place #4',
+                first: 50,
+                second: 33,
+                third: 22
+            }
+        ]
+
+
+        createSeries('first', 'Expense1');
+        createSeries('second', 'Expense2');
+        createSeries('third', 'Expense3');
+
+        function arrangeColumns() {
+
+            var series = chart.series.getIndex(0);
+
+            var w = 1 - xAxis.renderer.cellStartLocation - (1 - xAxis.renderer.cellEndLocation);
+            if (series.dataItems.length > 1) {
+                var x0 = xAxis.getX(series.dataItems.getIndex(0), "categoryX");
+                var x1 = xAxis.getX(series.dataItems.getIndex(1), "categoryX");
+                var delta = ((x1 - x0) / chart.series.length) * w;
+                if (am4core.isNumber(delta)) {
+                    var middle = chart.series.length / 2;
+
+                    var newIndex = 0;
+                    chart.series.each(function (series) {
+                        if (!series.isHidden && !series.isHiding) {
+                            series.dummyData = newIndex;
+                            newIndex++;
+                        }
+                        else {
+                            series.dummyData = chart.series.indexOf(series);
+                        }
+                    })
+                    var visibleCount = newIndex;
+                    var newMiddle = visibleCount / 2;
+
+                    chart.series.each(function (series) {
+                        var trueIndex = chart.series.indexOf(series);
+                        var newIndex = series.dummyData;
+
+                        var dx = (newIndex - trueIndex + middle - newMiddle) * delta
+
+                        series.animate({ property: "dx", to: dx }, series.interpolationDuration, series.interpolationEasing);
+                        series.bulletsContainer.animate({ property: "dx", to: dx }, series.interpolationDuration, series.interpolationEasing);
+                    })
+                }
+            }
+        }
+
+    }); // end am4core.ready()
+</script>
+<script src="./js/fa.js"></script>
+
+</html>

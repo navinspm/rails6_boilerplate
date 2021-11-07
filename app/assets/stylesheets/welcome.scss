@@ -1,0 +1,39 @@
+.loginWrapper{
+    display: flex;
+    align-items: center;
+}
+
+.loginWrapper .lftLgnContainer{
+    width: 50%;
+    background: url(/assets/login_image.jpg);
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+}
+
+.loginWrapper .rtLgnContainer{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginWrapper .rtLgnContainer .lgnFrmContainer{
+    width: 350px;
+}
+
+.loginWrapper .rtLgnContainer .inptWrpr{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.loginWrapper .rtLgnContainer .inptWrpr label{
+    margin-bottom: 8px;
+}
+
+.fadashBoard .loginWrapper .rtLgnContainer .inptWrpr input{
+    height: 45px;
+}
+

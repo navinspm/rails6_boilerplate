@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GwayERP-F&A</title>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Boostrap css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- google-material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- css stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- font css -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body>
+    <div class="fadashBoard d-flex align-items-start">
+        <div class="mainLftNavbar d-flex flex-column" id="sdBrToggle">
+            <div class="lgContainer">
+                <img id="mainLogo" src="./assets/FandAlogo.png" alt="">
+                <div id="hamMenuIcon" class="material-icons mnuTglIcon d-none" onclick="sideBarToggle()">menu</div>
+            </div>
+            <div class="prflContents">
+                <img class="prflImg" src="./assets/no_profile.png" alt="">
+                <h2 class="usrNme">Bruce Wayne</h2>
+                <a href="" class="usrEmlId">bruce_wayne@gwayerp.com</a>
+            </div>
+            <div class="navTabsWrapper">
+                <a class="btn lftNvBtn active" type="button">
+                    <img class="navIcons" src="./assets/dashboard.svg" alt="">
+                    Dashboard
+                </a>
+                <a class="btn lftNvBtn" type="button">
+                    <img class="navIcons" src="./assets/items.svg" alt="">
+                    Items
+                    <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                </a>
+                <a class="btn lftNvBtn acrdBtn collapsed" type="button" data-toggle="collapse"
+                    data-target="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1">
+                    <p class="m-0">
+                        <img class="navIcons" src="./assets/bank.svg" alt="">
+                        Banking
+                    </p>
+                    <span class="material-icons">expand_more</span>
+                </a>
+                <div class="collapse multi-collapse clpsMenu" id="multiCollapseExample1">
+                    <button class="btn inrLftBtn lftNvBtn active" type="button">
+                        Estimates
+                    </button>
+                    <button class="btn inrLftBtn lftNvBtn" type="button">
+                        Orders
+                    </button>
+                </div>
+                <a class="btn lftNvBtn acrdBtn collapsed" type="button" data-toggle="collapse"
+                    data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">
+                    <p class="m-0">
+                        <img class="navIcons" src="./assets/sales.svg" alt="">
+                        Sales
+                    </p>
+                    <span class="material-icons">expand_more</span>
+                </a>
+                <div class="collapse multi-collapse clpsMenu" id="multiCollapseExample2">
+                    <button class="btn inrLftBtn lftNvBtn active" type="button">
+                        Estimates
+                    </button>
+                    <button class="btn inrLftBtn lftNvBtn" type="button">
+                        Orders
+                    </button>
+                </div>
+                <a class="btn lftNvBtn acrdBtn collapsed" type="button" data-toggle="collapse"
+                    data-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">
+                    <p class="m-0">
+                        <img class="navIcons" src="./assets/purchase.svg" alt="">
+                        Purchase
+                    </p>
+                    <span class="material-icons">expand_more</span>
+                </a>
+                <div class="collapse multi-collapse clpsMenu" id="multiCollapseExample3">
+                    <button class="btn inrLftBtn lftNvBtn active" type="button">
+                        Estimates
+                    </button>
+                    <button class="btn inrLftBtn lftNvBtn" type="button">
+                        Orders
+                    </button>
+                </div>
+
+                <!-- vouchers tab -->
+
+                <a class="btn lftNvBtn acrdBtn collapsed" type="button" data-toggle="collapse"
+                    data-target="#multiCollapseExample6" aria-expanded="false" aria-controls="multiCollapseExample6">
+                    <p class="m-0">
+                        <img class="navIcons" src="./assets/vouchers.svg" alt="">
+                        Vouchers
+                    </p>
+                    <span class="material-icons">expand_more</span>
+                </a>
+                <div class="collapse multi-collapse clpsMenu" id="multiCollapseExample6">
+                    <a class="btn inrLftBtn lftNvBtn active" type="button">
+                        Purchase Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Sales Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Debit Note Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Credit Note Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Receipt Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Post Dated Receipt Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Payment Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Post Dated Payment Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Journal Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Contra Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Memorandum Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Reversing Journal Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+
+                </div>
+
+                <!-- voucher tab end -->
+
+                <a class="btn lftNvBtn acrdBtn collapsed" type="button" data-toggle="collapse"
+                    data-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4">
+                    <p class="m-0">
+                        <img class="navIcons" src="./assets/report.svg" alt="">
+                        Reports
+                    </p>
+                    <span class="material-icons">expand_more</span>
+                </a>
+                <div class="collapse multi-collapse clpsMenu" id="multiCollapseExample4">
+                    <button class="btn inrLftBtn lftNvBtn active" type="button">
+                        Estimates
+                    </button>
+                    <button class="btn inrLftBtn lftNvBtn" type="button">
+                        Orders
+                    </button>
+                </div>
+
+
+                <a class="btn lftNvBtn acrdBtn collapsed" type="button" data-toggle="collapse"
+                    data-target="#multiCollapseExample5" aria-expanded="false" aria-controls="multiCollapseExample5">
+                    <p class="m-0">
+                        <img class="navIcons" src="./assets/accountant.svg" alt="">
+                        Accountant
+                    </p>
+                    <span class="material-icons">expand_more</span>
+                </a>
+                <div class="collapse multi-collapse clpsMenu" id="multiCollapseExample5">
+                    <button class="btn inrLftBtn lftNvBtn active" type="button">
+                        Estimates
+                    </button>
+                    <button class="btn inrLftBtn lftNvBtn" type="button">
+                        Orders
+                    </button>
+                </div>
+            </div>
+            <div class="adtnNavBtns">
+                <a class="btn lftNvBtn adtnBtns">
+                    <img class="navIcons" src="./assets/settings.svg" alt="">
+                    Settings
+                </a>
+                <a class="btn lftNvBtn adtnBtns">
+                    <img class="navIcons" src="./assets/logout.svg" alt="">
+                    Logout
+                </a>
+                <button class="btn hdBtn p-0" onclick="sideBarToggle()"><img src="./assets/hideBtn.svg" alt=""></button>
+            </div>
+        </div>
+        <div class="faInrDshbord w-100">
+            <div class="tpNvBar">
+                <div class="infoIcons">
+                    <a href="" class="notiInfoIcons"><img src="./assets/notification.svg" alt="">
+                        <span class="ntiCntCrcl">02</span>
+                    </a>
+                    <a href="" class="notiInfoIcons"><img src="./assets/settings_white.svg" alt=""> </a>
+                    <a href="" class="notiInfoIcons"><img src="./assets/faq.svg" alt=""> </a>
+                </div>
+            </div>
+            <div class="nwPgHdr d-flex align-items-center justify-content-between">
+                <h3 class="d-flex align-items-center"> <a href="" class="btn material-icons ">keyboard_backspace</a>
+                    Purchase Voucher</h3>
+                <div class="pgHdrBtnStk d-flex align-items-center">
+                    <a href="" class="btn secButton">Edit</a>
+                    <a href="" class="btn secButton ml-2">Print</a>
+                </div>
+            </div>
+            <form action="">
+                <div class="famnCntnr">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="inptWrpr">
+                                <label class="cstmLbl mxLbl">Purchase No.</label>
+                                <p class="m-0">1234</p>
+                            </div>
+                            <div class="row">
+                                <div class="col-8">
+                                    <div class="inptWrpr">
+                                        <label class="cstmLbl mxLbl">Supplier Invoice No.</label>
+                                        <p class="m-0">12345</p>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="inptWrpr">
+                                        <label class="cstmLbl smlLbl">Date</label>
+                                        <p class="m-0">12/12/2012</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inptWrpr">
+                                <label class="cstmLbl mxLbl">Party Name</label>
+                                <p class="m-0">Samsung India Pvt. Ltd.,</p>
+                            </div>
+                            <div class="inptWrpr">
+                                <label class="cstmLbl mxLbl">GST No.</label>
+                                <p class="m-0">33ASDF145WES12</p>
+                            </div>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn text-danger p-0" data-toggle="modal"
+                                data-target="#ReceiptDetailsview">
+                                Click to View Receipt Details
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade faModal" id="ReceiptDetailsview" data-backdrop="static"
+                                data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="staticBackdropLabel">Receipt Details</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form action="">
+                                                <div class="row align-items-start">
+                                                    <div class="col-6">
+                                                        <div class="row">
+                                                            <div class="col-8">
+                                                                <div class="inptWrpr">
+                                                                    <label class="cstmLbl mxLbl">Receipt Note
+                                                                        No(s).</label>
+                                                                    <!-- <p class="m-0">123</p> -->
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-4">
+                                                                <div class="inptWrpr justify-content-end">
+                                                                    <label class="cstmLbl smlLbl">Date</label>
+                                                                    <!-- <p class="m-0">12/12/2012</p> -->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <table class="table vwTable mt-2">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="text-left">1234</td>
+                                                                    <td class="text-right">12/12/2012</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-left">1234</td>
+                                                                    <td class="text-right">12/12/2012</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-left">1234</td>
+                                                                    <td class="text-right">12/12/2012</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-left">1234</td>
+                                                                    <td class="text-right">12/12/2012</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="inptWrpr">
+                                                            <label class="cstmLbl mxLbl m-0">Receipt Doc No.</label>
+                                                            <p class="m-0">12</p>
+                                                        </div>
+                                                        <div class="inptWrpr">
+                                                            <label class="cstmLbl mxLbl">Despatched through</label>
+                                                            <p class="m-0">Frieght</p>
+                                                        </div>
+                                                        <div class="inptWrpr">
+                                                            <label class="cstmLbl mxLbl">Destination</label>
+                                                            <p class="m-0">Chennai</p>
+                                                        </div>
+                                                        <div class="inptWrpr">
+                                                            <label class="cstmLbl mxLbl">Carrier Name/Agent</label>
+                                                            <p class="m-0">Fedex</p>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="inptWrpr col-8">
+                                                                <label class="cstmLbl mxLbl">Bill of
+                                                                    Landing/LR-RR-No.</label>
+                                                                <p class="m-0 w-100">124/5512/2345</p>
+                                                            </div>
+                                                            <div class="inptWrpr col-4">
+                                                                <label class="cstmLbl smlLbl">Date</label>
+                                                                <p class="m-0">12/12/2012</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="inptWrpr">
+                                                            <label class="cstmLbl mxLbl">Motor Vehicle No</label>
+                                                            <p class="m-0">TN 99 W 9999</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn secButton"
+                                                data-dismiss="modal">Cancel</button>
+                                            <button type="button" class="btn primButton">Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="text-right">
+                                <p class="m-0 mnDate">01-Apr-20</p>
+                                <p class="m-0 mnDay">Wednesday</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tblWrpr">
+                        <table class="table vwTable">
+                            <thead>
+                                <tr>
+                                    <th>Name of Item</th>
+                                    <th>Quantity</th>
+                                    <th>Rate</th>
+                                    <th>Per</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="w-50">
+                                        <div class="inptWrpr">
+                                            Samsung_M30s
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inptWrpr">
+                                            150
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inptWrpr">
+                                            12,000
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inptWrpr">
+                                            Nos
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inptWrpr">
+                                            18,00,000
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="w-50">
+                                        <div class="inptWrpr">
+                                            Samsung_M30s
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inptWrpr">
+                                            150
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inptWrpr">
+                                            12,000
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inptWrpr">
+                                            Nos
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inptWrpr">
+                                            18,00,000
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="w-50">
+                                        <div class="inptWrpr">
+                                            Samsung_M30s
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inptWrpr">
+                                            150
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inptWrpr">
+                                            12,000
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inptWrpr">
+                                            Nos
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inptWrpr">
+                                            18,00,000
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row mt-4 align-items-end">
+                        <div class="col-8">
+                            <label class="">Narration</label>
+                            <div class="inptWrpr nrtnValue mb-0">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Dignissim diam quis enim lobortis
+                                scelerisque. Lobortis mattis aliquam faucibus purus in. Feugiat in fermentum posuere
+                                urna nec tincidunt praesent semper. Ut enim blandit volutpat maecenas volutpat blandit
+                                aliquam etiam erat. Dis parturient montes nascetur ridiculus mus mauris. Scelerisque
+                                mauris pellentesque pulvinar pellentesque. Donec pretium vulputate sapien nec sagittis
+                                aliquam malesuada. Risus feugiat in ante metus dictum. Arcu cursus vitae congue mauris
+                                rhoncus aenean vel. Praesent semper feugiat nibh sed. Vel orci porta non pulvinar neque
+                                laoreet suspendisse interdum consectetur. Dis parturient montes nascetur ridiculus mus
+                                mauris vitae. Blandit aliquam etiam erat velit scelerisque in dictum non consectetur. Ac
+                                tortor dignissim convallis aenean et tortor at risus
+                            </div>
+                        </div>
+                        <div class="col-4 prcDtls">
+                            <div class="inptWrpr mt-2 mb-0">
+                                <label class="m-0 w-50" for="">Sub Total</label>
+                                <p class="text-right m-0 w-50">18,00,000.00</p>
+                            </div>
+                            <div class="inptWrpr mt-2 mb-0">
+                                <label class="m-0 w-50" for="">CGST</label>
+                                <p class="text-right m-0 w-50">5000.00</p>
+                            </div>
+                            <div class="inptWrpr mt-2 mb-0">
+                                <label class="m-0 w-50" for="">SGST / IGST</label>
+                                <p class="text-right m-0 w-50">5000.00</p>
+                            </div>
+                            <div class="inptWrpr mt-2 mb-0">
+                                <label class="m-0 w-50" for="">Total</label>
+                                <p class="text-right m-0 w-50 mnPrcVle">18,10,000.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+<script src="./js/fa.js"></script>
+
+</html>

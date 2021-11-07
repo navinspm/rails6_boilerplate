@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="11.76" height="12.4" viewBox="0 0 11.76 12.4">
+  <g id="power-button_1_" data-name="power-button (1)" transform="translate(-3.719 -3.005)">
+    <g id="Group_194" data-name="Group 194" transform="translate(3.719 4.387)">
+      <g id="Group_193" data-name="Group 193">
+        <path id="Path_286" data-name="Path 286" d="M101.473,113.311a.48.48,0,1,0-.486.827,4.921,4.921,0,1,1-4.982,0,.48.48,0,0,0-.486-.827,5.88,5.88,0,1,0,5.954,0Z" transform="translate(-92.616 -113.245)" fill="#f70000"/>
+      </g>
+    </g>
+    <g id="Group_196" data-name="Group 196" transform="translate(9.119 3.005)">
+      <g id="Group_195" data-name="Group 195">
+        <path id="Path_287" data-name="Path 287" d="M243.152,74.832a.48.48,0,0,0-.48.48v6.04a.48.48,0,1,0,.959,0v-6.04A.48.48,0,0,0,243.152,74.832Z" transform="translate(-242.672 -74.832)" fill="#f70000"/>
+      </g>
+    </g>
+  </g>
+</svg>

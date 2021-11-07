@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GwayERP-F&A</title>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Boostrap css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- google-material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- css stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- font css -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body>
+    <div class="fadashBoard d-flex align-items-start">
+        <div class="mainLftNavbar d-flex flex-column" id="sdBrToggle">
+            <div class="lgContainer">
+                <img id="mainLogo" src="./assets/FandAlogo.png" alt="">
+                <div id="hamMenuIcon" class="material-icons mnuTglIcon d-none" onclick="sideBarToggle()">menu</div>
+            </div>
+            <div class="prflContents">
+                <img class="prflImg" src="./assets/no_profile.png" alt="">
+                <h2 class="usrNme">Bruce Wayne</h2>
+                <a href="" class="usrEmlId">bruce_wayne@gwayerp.com</a>
+            </div>
+            <div class="navTabsWrapper">
+                <a class="btn lftNvBtn active" type="button">
+                    <img class="navIcons" src="./assets/dashboard.svg" alt="">
+                    Dashboard
+                </a>
+                <a class="btn lftNvBtn" type="button">
+                    <img class="navIcons" src="./assets/items.svg" alt="">
+                    Items
+                    <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                </a>
+                <a class="btn lftNvBtn acrdBtn collapsed" type="button" data-toggle="collapse"
+                    data-target="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1">
+                    <p class="m-0">
+                        <img class="navIcons" src="./assets/bank.svg" alt="">
+                        Banking
+                    </p>
+                    <span class="material-icons">expand_more</span>
+                </a>
+                <div class="collapse multi-collapse clpsMenu" id="multiCollapseExample1">
+                    <button class="btn inrLftBtn lftNvBtn active" type="button">
+                        Estimates
+                    </button>
+                    <button class="btn inrLftBtn lftNvBtn" type="button">
+                        Orders
+                    </button>
+                </div>
+                <a class="btn lftNvBtn acrdBtn collapsed" type="button" data-toggle="collapse"
+                    data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">
+                    <p class="m-0">
+                        <img class="navIcons" src="./assets/sales.svg" alt="">
+                        Sales
+                    </p>
+                    <span class="material-icons">expand_more</span>
+                </a>
+                <div class="collapse multi-collapse clpsMenu" id="multiCollapseExample2">
+                    <button class="btn inrLftBtn lftNvBtn active" type="button">
+                        Estimates
+                    </button>
+                    <button class="btn inrLftBtn lftNvBtn" type="button">
+                        Orders
+                    </button>
+                </div>
+                <a class="btn lftNvBtn acrdBtn collapsed" type="button" data-toggle="collapse"
+                    data-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">
+                    <p class="m-0">
+                        <img class="navIcons" src="./assets/purchase.svg" alt="">
+                        Purchase
+                    </p>
+                    <span class="material-icons">expand_more</span>
+                </a>
+                <div class="collapse multi-collapse clpsMenu" id="multiCollapseExample3">
+                    <button class="btn inrLftBtn lftNvBtn active" type="button">
+                        Estimates
+                    </button>
+                    <button class="btn inrLftBtn lftNvBtn" type="button">
+                        Orders
+                    </button>
+                </div>
+
+                <!-- vouchers tab -->
+
+                <a class="btn lftNvBtn acrdBtn collapsed" type="button" data-toggle="collapse"
+                    data-target="#multiCollapseExample6" aria-expanded="false" aria-controls="multiCollapseExample6">
+                    <p class="m-0">
+                        <img class="navIcons" src="./assets/vouchers.svg" alt="">
+                        Vouchers
+                    </p>
+                    <span class="material-icons">expand_more</span>
+                </a>
+                <div class="collapse multi-collapse clpsMenu" id="multiCollapseExample6">
+                    <a class="btn inrLftBtn lftNvBtn active" type="button">
+                        Purchase Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Sales Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Debit Note Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Credit Note Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Receipt Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Post Dated Receipt Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Payment Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Post Dated Payment Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Journal Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Contra Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Memorandum Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+                    <a class="btn inrLftBtn lftNvBtn" type="button">
+                        Reversing Journal Voucher
+                        <span class="adBtn" href="#"><img src="./assets/addnew.svg"></span>
+                    </a>
+
+                </div>
+
+                <!-- voucher tab end -->
+
+                <a class="btn lftNvBtn acrdBtn collapsed" type="button" data-toggle="collapse"
+                    data-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4">
+                    <p class="m-0">
+                        <img class="navIcons" src="./assets/report.svg" alt="">
+                        Reports
+                    </p>
+                    <span class="material-icons">expand_more</span>
+                </a>
+                <div class="collapse multi-collapse clpsMenu" id="multiCollapseExample4">
+                    <button class="btn inrLftBtn lftNvBtn active" type="button">
+                        Estimates
+                    </button>
+                    <button class="btn inrLftBtn lftNvBtn" type="button">
+                        Orders
+                    </button>
+                </div>
+
+
+                <a class="btn lftNvBtn acrdBtn collapsed" type="button" data-toggle="collapse"
+                    data-target="#multiCollapseExample5" aria-expanded="false" aria-controls="multiCollapseExample5">
+                    <p class="m-0">
+                        <img class="navIcons" src="./assets/accountant.svg" alt="">
+                        Accountant
+                    </p>
+                    <span class="material-icons">expand_more</span>
+                </a>
+                <div class="collapse multi-collapse clpsMenu" id="multiCollapseExample5">
+                    <button class="btn inrLftBtn lftNvBtn active" type="button">
+                        Estimates
+                    </button>
+                    <button class="btn inrLftBtn lftNvBtn" type="button">
+                        Orders
+                    </button>
+                </div>
+            </div>
+            <div class="adtnNavBtns">
+                <a class="btn lftNvBtn adtnBtns">
+                    <img class="navIcons" src="./assets/settings.svg" alt="">
+                    Settings
+                </a>
+                <a class="btn lftNvBtn adtnBtns">
+                    <img class="navIcons" src="./assets/logout.svg" alt="">
+                    Logout
+                </a>
+                <button class="btn hdBtn p-0" onclick="sideBarToggle()"><img src="./assets/hideBtn.svg" alt=""></button>
+            </div>
+        </div>
+        <div class="faInrDshbord w-100">
+            <div class="tpNvBar">
+                <div class="infoIcons">
+                    <a href="" class="notiInfoIcons"><img src="./assets/notification.svg" alt="">
+                        <span class="ntiCntCrcl">02</span>
+                    </a>
+                    <a href="" class="notiInfoIcons"><img src="./assets/settings_white.svg" alt=""> </a>
+                    <a href="" class="notiInfoIcons"><img src="./assets/faq.svg" alt=""> </a>
+                </div>
+            </div>
+            <div class="nwPgHdr d-flex align-items-center justify-content-between">
+                <h3>New Customer</h3>
+                <a href="" class="material-icons">clear</a>
+            </div>
+            <form action="">
+                <div class="famnCntnr">
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="inptWrpr">
+                                <label class="cstmLbl mxLbl">Customer Type</label>
+                                <input type="radio" name="cstmrType" id="Individual">
+                                <label for="Individual" class="cursor-pointer ml-2 mr-4">Individual</label>
+                                <input type="radio" name="cstmrType" id="Company">
+                                <label for="Company" class="cursor-pointer ml-2">Company</label>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex">
+                            <div class="inptWrpr">
+                                <label class="cstmLbl mxLbl">Primary Contact</label>
+                            </div>
+                            <div class="row w-100">
+                                <div class="inptWrpr col-2">
+                                    <select name="" id="">
+                                        <option value="">Salutation</option>
+                                    </select>
+                                </div>
+                                <div class="inptWrpr col-3">
+                                    <input type="text" name="" id="" placeholder="First Name">
+                                </div>
+                                <div class="inptWrpr col-3">
+                                    <input type="text" name="" id="" placeholder="Last Name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex">
+                            <div class="inptWrpr">
+                                <label class="cstmLbl mxLbl">Company Name</label>
+                            </div>
+                            <div class="row w-100">
+                                <div class="inptWrpr col-8">
+                                    <input type="text" name="" id="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex">
+                            <div class="inptWrpr">
+                                <label class="cstmLbl mxLbl">Customer Display Name*</label>
+                            </div>
+                            <div class="row w-100">
+                                <div class="inptWrpr col-8">
+                                    <select name="" id="">
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                                <div class="inptWrpr col-2 pl-1">
+                                    <a href="#" data-toggle="popover"
+                                        class="d-flex align-items-center material-icons fqIcn"
+                                        data-content="This is the name that will be shown on invoices, bills created for this customer.">help_outline</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex">
+                            <div class="inptWrpr">
+                                <label class="cstmLbl mxLbl">Customer Email</label>
+                            </div>
+                            <div class="row w-100">
+                                <div class="inptWrpr col-8">
+                                    <input type="text" name="" id="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex">
+                            <div class="inptWrpr">
+                                <label class="cstmLbl mxLbl">Customer Phone</label>
+                            </div>
+                            <div class="row w-100">
+                                <div class="inptWrpr col-4">
+                                    <input type="text" name="" id="" placeholder="Work Phone">
+                                </div>
+                                <div class="inptWrpr col-4">
+                                    <input type="text" name="" id="" placeholder="Mobile">
+                                </div>
+                                <div class="inptWrpr col-3 admrBtndtls">
+                                    <a href="">Add more details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex">
+                            <div class="inptWrpr">
+                                <label class="cstmLbl mxLbl">Website</label>
+                            </div>
+                            <div class="row w-100">
+                                <div class="inptWrpr col-8">
+                                    <input type="text" name="" id="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul class="nav nav-pills mb-3 cstmNavpills mt-4" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" id="pills-otherDetails-tab" data-toggle="pill"
+                                href="#pills-otherDetails" role="tab" aria-controls="pills-otherDetails"
+                                aria-selected="true">Other Details</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="pills-address-tab" data-toggle="pill" href="#pills-address"
+                                role="tab" aria-controls="pills-address" aria-selected="false">Address</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="pills-contactPerson-tab" data-toggle="pill"
+                                href="#pills-contactPerson" role="tab" aria-controls="pills-contactPerson"
+                                aria-selected="false">Contact Person</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="pills-CustomFields-tab" data-toggle="pill"
+                                href="#pills-CustomFields" role="tab" aria-controls="pills-CustomFields"
+                                aria-selected="false">Custom Fields</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="pills-reportingTags-tab" data-toggle="pill"
+                                href="#pills-reportingTags" role="tab" aria-controls="pills-reportingTags"
+                                aria-selected="false">Reporting Tags</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="pills-remarks-tab" data-toggle="pill" href="#pills-remarks"
+                                role="tab" aria-controls="pills-remarks" aria-selected="false">Remarks</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-otherDetails" role="tabpanel"
+                            aria-labelledby="pills-otherDetails-tab">
+                            <div class="row">
+                                <div class="col-12 d-flex mt-3">
+                                    <div class="inptWrpr">
+                                        <label class="cstmLbl mxLbl">Company Name</label>
+                                    </div>
+                                    <div class="row w-100">
+                                        <div class="inptWrpr col-8">
+                                            <select name="" id="">
+                                                <option value="">INR - Indian Rupee</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 d-flex">
+                                    <div class="inptWrpr">
+                                        <label class="cstmLbl mxLbl">Opening Balance</label>
+                                    </div>
+                                    <div class="row w-100">
+                                        <div class="inptWrpr col-8">
+                                            <input type="text" name="" id="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 d-flex">
+                                    <div class="inptWrpr">
+                                        <label class="cstmLbl mxLbl">Payment Terms</label>
+                                    </div>
+                                    <div class="row w-100">
+                                        <div class="inptWrpr col-8">
+                                            <select name="" id="">
+                                                <option value="">Due on Receipt</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 d-flex mt-2 mb-2">
+                                    <div class="inptWrpr">
+                                        <label class="cstmLbl mxLbl">Enable Potral?</label>
+                                    </div>
+                                    <div class="row w-100">
+                                        <div class="col-8">
+                                            <input type="checkbox" name="" id="allowportal">
+                                            <label for="allowportal">Allow portal access for this customer</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 d-flex">
+                                    <div class="inptWrpr">
+                                        <label class="cstmLbl mxLbl">Portal Language</label>
+                                    </div>
+                                    <div class="row w-100">
+                                        <div class="inptWrpr col-8">
+                                            <select name="" id="">
+                                                <option value="">English</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 d-flex">
+                                    <div class="inptWrpr">
+                                        <label class="cstmLbl mxLbl">Facebook</label>
+                                    </div>
+                                    <div class="row w-100">
+                                        <div class="inptWrpr prefix col-8">
+                                            <span class="iconBox"><img src="./assets/facebook.svg"></span>
+                                            <input type="text" name="" id="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 d-flex">
+                                    <div class="inptWrpr">
+                                        <label class="cstmLbl mxLbl">Twitter</label>
+                                    </div>
+                                    <div class="row w-100">
+                                        <div class="inptWrpr prefix col-8">
+                                            <span class="iconBox"><img src="./assets/twitter.svg"></span>
+                                            <input type="text" name="" id="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 infoLn mt-5">
+                                    <p>
+                                        <b>Customer Owner:</b> Assign a user as the Customer owner to provide access
+                                        only to
+                                        the
+                                        data of this customer. <a href="">Learn More</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-address" role="tabpanel"
+                            aria-labelledby="pills-address-tab">
+                            <div class="row adrsSctns">
+                                <div class="col-4">
+                                    <div class="row">
+                                        <div class="col-12 mt-3 mb-5">
+                                            <P class="sctnTtle m-0">BILLING ADDRESS</p>
+                                        </div>
+                                        <div class="col-12 d-flex">
+                                            <div class="inptWrpr">
+                                                <label class="cstmLbl mxLbl">Attention</label>
+                                            </div>
+                                            <div class="row w-100">
+                                                <div class="inptWrpr col-12">
+                                                    <input type="text" name="" id="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 d-flex">
+                                            <div class="inptWrpr">
+                                                <label class="cstmLbl mxLbl">Country / Region</label>
+                                            </div>
+                                            <div class="row w-100">
+                                                <div class="inptWrpr col-12">
+                                                    <select name="" id="">
+                                                        <option value=""></option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 d-flex align-items-start">
+                                            <div class="inptWrpr">
+                                                <label class="cstmLbl mxLbl">Address</label>
+                                            </div>
+                                            <div class="row w-100">
+                                                <div class="inptWrpr col-12">
+                                                    <textarea name="" id="" cols="30" rows="10"
+                                                        placeholder="Street 1"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 d-flex align-items-start">
+                                            <div class="inptWrpr">
+                                                <label class="cstmLbl mxLbl"></label>
+                                            </div>
+                                            <div class="row w-100">
+                                                <div class="inptWrpr col-12">
+                                                    <textarea name="" id="" cols="30" rows="4"
+                                                        placeholder="Street 2"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 d-flex">
+                                            <div class="inptWrpr">
+                                                <label class="cstmLbl mxLbl">City</label>
+                                            </div>
+                                            <div class="row w-100">
+                                                <div class="inptWrpr col-12">
+                                                    <input type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 d-flex">
+                                            <div class="inptWrpr">
+                                                <label class="cstmLbl mxLbl">State</label>
+                                            </div>
+                                            <div class="row w-100">
+                                                <div class="inptWrpr col-12">
+                                                    <input type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 d-flex">
+                                            <div class="inptWrpr">
+                                                <label class="cstmLbl mxLbl">Zipcode</label>
+                                            </div>
+                                            <div class="row w-100">
+                                                <div class="inptWrpr col-12">
+                                                    <input type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 d-flex">
+                                            <div class="inptWrpr">
+                                                <label class="cstmLbl mxLbl">Phone</label>
+                                            </div>
+                                            <div class="row w-100">
+                                                <div class="inptWrpr col-12">
+                                                    <input type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 d-flex">
+                                            <div class="inptWrpr">
+                                                <label class="cstmLbl mxLbl">Fax</label>
+                                            </div>
+                                            <div class="row w-100">
+                                                <div class="inptWrpr col-12">
+                                                    <input type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="row">
+                                        <div class="col-12 mt-3 mb-5 d-flex align-items-center justify-content-between">
+                                            <P class="sctnTtle m-0">SHIPPING ADDRESS</p>
+                                            <a class="linkTxt">Same as Billing Address</a>
+                                        </div>
+                                        <div class="col-12 d-flex">
+                                            <div class="inptWrpr">
+                                                <label class="cstmLbl mxLbl">Attention</label>
+                                            </div>
+                                            <div class="row w-100">
+                                                <div class="inptWrpr col-12">
+                                                    <input type="text" name="" id="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 d-flex">
+                                            <div class="inptWrpr">
+                                                <label class="cstmLbl mxLbl">Country / Region</label>
+                                            </div>
+                                            <div class="row w-100">
+                                                <div class="inptWrpr col-12">
+                                                    <select name="" id="">
+                                                        <option value=""></option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 d-flex align-items-start">
+                                            <div class="inptWrpr">
+                                                <label class="cstmLbl mxLbl">Address</label>
+                                            </div>
+                                            <div class="row w-100">
+                                                <div class="inptWrpr col-12">
+                                                    <textarea name="" id="" cols="30" rows="10"
+                                                        placeholder="Street 1"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 d-flex align-items-start">
+                                            <div class="inptWrpr">
+                                                <label class="cstmLbl mxLbl"></label>
+                                            </div>
+                                            <div class="row w-100">
+                                                <div class="inptWrpr col-12">
+                                                    <textarea name="" id="" cols="30" rows="4"
+                                                        placeholder="Street 2"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 d-flex">
+                                            <div class="inptWrpr">
+                                                <label class="cstmLbl mxLbl">City</label>
+                                            </div>
+                                            <div class="row w-100">
+                                                <div class="inptWrpr col-12">
+                                                    <input type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 d-flex">
+                                            <div class="inptWrpr">
+                                                <label class="cstmLbl mxLbl">State</label>
+                                            </div>
+                                            <div class="row w-100">
+                                                <div class="inptWrpr col-12">
+                                                    <input type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 d-flex">
+                                            <div class="inptWrpr">
+                                                <label class="cstmLbl mxLbl">Zipcode</label>
+                                            </div>
+                                            <div class="row w-100">
+                                                <div class="inptWrpr col-12">
+                                                    <input type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 d-flex">
+                                            <div class="inptWrpr">
+                                                <label class="cstmLbl mxLbl">Phone</label>
+                                            </div>
+                                            <div class="row w-100">
+                                                <div class="inptWrpr col-12">
+                                                    <input type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 d-flex">
+                                            <div class="inptWrpr">
+                                                <label class="cstmLbl mxLbl">Fax</label>
+                                            </div>
+                                            <div class="row w-100">
+                                                <div class="inptWrpr col-12">
+                                                    <input type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-contactPerson" role="tabpanel"
+                            aria-labelledby="pills-contactPerson-tab">
+                            <div class="tblWrpr frmWrpr mt-3">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Salutation</th>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Email Address</th>
+                                            <th>Work Phone</th>
+                                            <th>Mobile</th>
+                                            <th>Skype Name/Number</th>
+                                            <th>Designation</th>
+                                            <th>Department</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="inptWrpr">
+                                                    <select>
+                                                        <option value=""></option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="inptWrpr">
+                                                    <input type="text" name="" id="">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="inptWrpr">
+                                                    <input type="text" name="" id="">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="inptWrpr">
+                                                    <input type="text" name="" id="">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="inptWrpr">
+                                                    <input type="text" name="" id="">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="inptWrpr">
+                                                    <input type="text" name="" id="">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="inptWrpr">
+                                                    <input type="text" name="" id="">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="inptWrpr">
+                                                    <input type="text" name="" id="">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="inptWrpr">
+                                                    <input type="text" name="" id="">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="text-right">
+                                    <a href="" class="btn outlButton admrBtn ml-auto">
+                                        <span class="material-icons mr-2">add_circle_outline</span>
+                                        Add More
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-CustomFields" role="tabpanel"
+                            aria-labelledby="pills-CustomFields-tab">
+                            <div class="row">
+                                <div class="col-6 mt-4 mb-5 adtnlInfo">
+                                    <p>Start adding custom fields for your contacts by going to Settings <span
+                                            class="material-icons">
+                                            east
+                                        </span>
+                                        Preferences <span class="material-icons">
+                                            east
+                                        </span>
+                                        Customers and Vendors. You can add as many as Ten extra fields, as well as
+                                        refine
+                                        the address format of your customers from there.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-reportingTags" role="tabpanel"
+                            aria-labelledby="pills-reportingTags-tab">
+                            <div class="row">
+                                <div class="col-5 mt-4 mb-5 adtnlInfo">
+                                    <p>You've not created any Reporting Tags.
+                                        Start creating reporting tags by going to More Settings <span
+                                            class="material-icons">
+                                            east
+                                        </span> Reporting Tags
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-remarks" role="tabpanel"
+                            aria-labelledby="pills-remarks-tab">
+                            <div class="row flex-column mt-5">
+                                <div class="inptWrpr col-8">
+                                    <label class="cstmLbl mxLbl">Remarks <span>(For Internal Use)</span></label>
+                                </div>
+                                <div class="col-8">
+                                    <div class="inptWrpr">
+                                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row ftrBtnStk mt-5 text-right justify-content-end">
+                        <button class="btn secButton mr-2">CANCEL</button>
+                        <button class="btn primButton">SAVE</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+<script src="./js/fa.js"></script>
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="popover"]').popover();
+    });
+</script>
+
+</html>
